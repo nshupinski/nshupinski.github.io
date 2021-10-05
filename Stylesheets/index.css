@@ -13,18 +13,17 @@ code {
 
 /*Nav*/
 .blur {
-  background: rgba(255, 255, 255, 0.51);
+  background: rgba(255, 255, 255, 0.41);
 }
 
 /*Header*/
 #headerBackground {
-  background-image: url("images/foggy_hills_background.jpg");
+  background-image: url("../Images/foggy_hills_background.jpg");
   height: 100vh;
   background-repeat: no-repeat;
   background-size: cover;
 }
 #headerBox {
-  background-color: black;
   background: rgba(0, 0, 0, 0.85);
   height: 45em;
   margin-top: 6em;
@@ -45,5 +44,6 @@ code {
   font-size: 10em;
 }
 #headerPic {
-  width: 20em;
+  width: 40rem;
+  margin-left: 4rem;
 }
