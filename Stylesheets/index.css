@@ -114,4 +114,11 @@ code {
     -webkit-clip-path: inset(2rem);
     clip-path: inset(2rem);
   }
+
+  /*About Me*/
+  #about-container {
+    background-color: #a6b6b4;
+    padding-top: 2em;
+    padding-bottom: 2em;
+  }
 }
