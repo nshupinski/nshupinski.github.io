@@ -121,4 +121,14 @@ code {
     padding-top: 2em;
     padding-bottom: 2em;
   }
+
+  #accordion {
+    margin-left: 25%;
+    margin-right: 25%;
+  }
+
+  .accordion-button:not(.collapsed) {
+    color: black;
+    background-color: #a6b6b4;
+  }
 }
