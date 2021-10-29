@@ -48,6 +48,33 @@ code {
   margin-left: 4rem;
 }
 
+/*About Me*/
+#about-container {
+  background-color: #577a75;
+  padding-top: 2em;
+  padding-right: 0;
+  padding-left: 0;
+}
+.accordion-item {
+  border: none;
+  border-radius: 0;
+}
+.accordion-button:not(.collapsed) {
+  color: black;
+  background-color: #a6b6b4;
+  text-align: center;
+  padding-left: 40%;
+  padding-right: 40%;
+}
+.carousel-image {
+  width: 100%;
+  height: 20em;
+  object-fit: contain;
+}
+.carousel-header {
+  text-align: center;
+}
+
 /*Projects*/
 .portfolio-item {
   display: block;
@@ -113,22 +140,5 @@ code {
     background-color: rgba(29, 128, 159, 0.9);
     -webkit-clip-path: inset(2rem);
     clip-path: inset(2rem);
-  }
-
-  /*About Me*/
-  #about-container {
-    background-color: #a6b6b4;
-    padding-top: 2em;
-    padding-bottom: 2em;
-  }
-
-  #accordion {
-    margin-left: 25%;
-    margin-right: 25%;
-  }
-
-  .accordion-button:not(.collapsed) {
-    color: black;
-    background-color: #a6b6b4;
   }
 }
