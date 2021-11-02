@@ -21,7 +21,7 @@
     <div class="bg-img justify-content-center" id="headerBackground">
       
       <!--Nav-->
-      <nav class="navbar navbar-expand-lg navbar-light p-3 blur">
+      <nav class="navbar navbar-expand-lg navbar-light p-3 blur fixed-top">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">Nicholas Shupinski</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -59,155 +59,157 @@
         </div>
       </div>
 
-    </div>
-
-    <!--About-->
-    <div class="container-fluid justify-content-center" id="about-container">
-      <div class="container">
-        <div class="row align-items-center">
-          <h3 style="text-align: center; margin-bottom: 2em;">About Me</h3>
-        </div>
-        <div class="row align-items-center">
-          <div class="col">
-            <p>Hi I'm Nick! I live in Philadelphia and graduated from Temple University with a B.S. in Information Science and Technology. 
-              I love my cats Bacon and Kiwi, and my fish Commodore Gills more than anything in the world (Keep an eye out for them hidden on this site),
-              and I spend my free time rock climbing, 3D modeling using a software called Blender, playing PC games, and working on personal coding projects.
-            </p>
+      <!--About-->
+      <div class="container-fluid justify-content-center" id="about-container">
+        <div class="container">
+          <div class="row align-items-center justify-content-center">
+            <h3 style="text-align: center; margin-bottom: 1.5em;">About Me</h3>
+            <img src="Images/About-Me-Pic.png" class="col-2" alt="Nick Shupinski Profile Picture" style="text-align: center; margin-bottom: 1.5 em;"/>
+          </div>
+          <div class="row align-items-center">
+            <div class="col">
+              <div id="aboutMeParContainer">
+                <p>Hi I'm Nick! I live in Philadelphia and graduated from Temple University with a B.S. in Information Science and Technology. 
+                  I love my cats Bacon and Kiwi, and my fish Commodore Gills more than anything in the world (Keep an eye out for them hidden on this site),
+                  and I spend my free time rock climbing, 3D modeling using a software called Blender, playing PC games, and working on personal coding projects.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-      <!--Accordion-->
-      <div class="accordion" id="accordion">
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="headingOne">
-            <button class="accordion-button" type="button" id="btnAccord" onclick="btnAccord_Clicked()" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-              More About My Personal Hobbies
-            </button>
-          </h2>
-          <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordion">
-            <div class="accordion-body">
-              <!--Climbing Carousel-->
-              <div class="row">
-                <div class="col">
-                  <div style="text-align: center; margin-bottom: 10px;">
-                    <h4 class="carousel-header" style="display: inline;"><u>Rock Climbing</u></h4>
-                    <img src="Images/Climbing/Climbing-Icon.png" class="hobby-icon">
-                  </div>
-                  <div id="carouselClimbing" class="carousel slide" data-bs-interval="false" data-bs-ride="carousel">
-                    <div class="carousel-indicators">
-                      <button type="button" data-bs-target="#carouselClimbing" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                      <button type="button" data-bs-target="#carouselClimbing" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                      <button type="button" data-bs-target="#carouselClimbing" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                      <button type="button" data-bs-target="#carouselClimbing" data-bs-slide-to="3" aria-label="Slide 4"></button>
-                      <button type="button" data-bs-target="#carouselClimbing" data-bs-slide-to="4" aria-label="Slide 5"></button>
-                      <button type="button" data-bs-target="#carouselClimbing" data-bs-slide-to="5" aria-label="Slide 6"></button>
-                    </div>
-                    <div class="carousel-inner">
-                      <div class="carousel-item active" data-bs-interval="6000">
-                        <img class="carousel-image" src="Images/Climbing/WCU -18 (46 of 100).jpg" class="d-block w-75" alt="...">
-                      </div>
-                      <div class="carousel-item" data-bs-interval="6000">
-                        <img class="carousel-image" src="Images/Climbing/FB_IMG_1576892447409.jpg" class="d-block w-75" alt="...">
-                      </div>
-                      <div class="carousel-item" data-bs-interval="6000">
-                        <img class="carousel-image" src="Images/Climbing/Screenshot_20200209-145558.png" class="d-block w-75" alt="...">
-                      </div>
-                      <div class="carousel-item" data-bs-interval="6000">
-                        <img class="carousel-image" src="Images/Climbing/IMG_4784.JPG" class="d-block w-75" alt="...">
-                      </div>
-                      <div class="carousel-item" data-bs-interval="6000">
-                        <img class="carousel-image" src="Images/Climbing/Screenshot 2021-10-20 163150.png" class="d-block w-75" alt="...">
-                      </div>
-                      <div class="carousel-item" data-bs-interval="6000">
-                        <img class="carousel-image" src="Images/Climbing/IMG_4601.JPG" class="d-block w-75" alt="...">
-                      </div>
-                    </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselClimbing" data-bs-slide="prev">
-                      <span class="carousel-control-prev-icon"></span>
-                      <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselClimbing" data-bs-slide="next">
-                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">Next</span>
-                    </button>
-                  </div>
-                </div>
-                  <!--Blender Carousel-->
+        <!--Accordion-->
+        <div class="accordion" id="accordion">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+              <button class="accordion-button" type="button" id="btnAccord" onclick="btnAccord_Clicked()" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                More About My Personal Hobbies
+              </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordion">
+              <div class="accordion-body">
+                <!--Climbing Carousel-->
+                <div class="row">
                   <div class="col">
                     <div style="text-align: center; margin-bottom: 10px;">
-                      <h4 class="carousel-header" style="display: inline;"><u>Blender</u></h4>
-                      <img src="Images/Blender/Blender-Icon.png" class="hobby-icon" style="padding-bottom: 6px;">
+                      <h4 class="carousel-header" style="display: inline;"><u>Rock Climbing</u></h4>
+                      <img src="Images/Climbing/Climbing-Icon.png" class="hobby-icon">
                     </div>
-                    <div id="carouselBlender" class="carousel slide" data-bs-interval="false" data-bs-ride="carousel">
+                    <div id="carouselClimbing" class="carousel slide" data-bs-interval="false" data-bs-ride="carousel">
                       <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#carouselBlender" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#carouselBlender" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                        <button type="button" data-bs-target="#carouselBlender" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                        <button type="button" data-bs-target="#carouselBlender" data-bs-slide-to="3" aria-label="Slide 4"></button>
-                        <button type="button" data-bs-target="#carouselBlender" data-bs-slide-to="4" aria-label="Slide 5"></button>
-                        <button type="button" data-bs-target="#carouselBlender" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                        <button type="button" data-bs-target="#carouselClimbing" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselClimbing" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselClimbing" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        <button type="button" data-bs-target="#carouselClimbing" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                        <button type="button" data-bs-target="#carouselClimbing" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                        <button type="button" data-bs-target="#carouselClimbing" data-bs-slide-to="5" aria-label="Slide 6"></button>
                       </div>
                       <div class="carousel-inner">
                         <div class="carousel-item active" data-bs-interval="6000">
-                          <img class="carousel-image" src="Images/Blender/mom's house 1.png" class="d-block w-75" alt="...">
+                          <img class="carousel-image" src="Images/Climbing/WCU -18 (46 of 100).jpg" class="d-block w-75" alt="...">
                         </div>
                         <div class="carousel-item" data-bs-interval="6000">
-                          <img class="carousel-image" src="Images/Blender/Imperial-Pint-Beer.png" class="d-block w-75" alt="...">
+                          <img class="carousel-image" src="Images/Climbing/FB_IMG_1576892447409.jpg" class="d-block w-75" alt="...">
                         </div>
                         <div class="carousel-item" data-bs-interval="6000">
-                          <img class="carousel-image" src="Images/Blender/finished3_Done.png" class="d-block w-75" alt="...">
+                          <img class="carousel-image" src="Images/Climbing/Screenshot_20200209-145558.png" class="d-block w-75" alt="...">
                         </div>
                         <div class="carousel-item" data-bs-interval="6000">
-                          <img class="carousel-image" src="Images/Blender/chessRender2.png" class="d-block w-75" alt="...">
+                          <img class="carousel-image" src="Images/Climbing/IMG_4784.JPG" class="d-block w-75" alt="...">
                         </div>
                         <div class="carousel-item" data-bs-interval="6000">
-                          <img class="carousel-image" src="Images/Blender/519abcForever.png" class="d-block w-75" alt="...">
+                          <img class="carousel-image" src="Images/Climbing/Screenshot 2021-10-20 163150.png" class="d-block w-75" alt="...">
                         </div>
                         <div class="carousel-item" data-bs-interval="6000">
-                          <img class="carousel-image" src="Images/Blender/TheImageOfSpace.png" class="d-block w-75" alt="...">
+                          <img class="carousel-image" src="Images/Climbing/IMG_4601.JPG" class="d-block w-75" alt="...">
                         </div>
                       </div>
-                      <button class="carousel-control-prev" type="button" data-bs-target="#carouselBlender" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <button class="carousel-control-prev" type="button" data-bs-target="#carouselClimbing" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
                         <span class="visually-hidden">Previous</span>
                       </button>
-                      <button class="carousel-control-next" type="button" data-bs-target="#carouselBlender" data-bs-slide="next">
+                      <button class="carousel-control-next" type="button" data-bs-target="#carouselClimbing" data-bs-slide="next">
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
                         <span class="visually-hidden">Next</span>
                       </button>
                     </div>
                   </div>
-                  <!--Gaming Carousel-->
-                  <div class="col">
-                    <div style="text-align: center; margin-bottom: 10px;">
-                      <h4 class="carousel-header" style="display: inline;"><u>Gaming</u></h4>
-                      <img src="Images/Gaming-Icon.png" class="hobby-icon" style="padding-bottom: 5px;">
+                    <!--Blender Carousel-->
+                    <div class="col">
+                      <div style="text-align: center; margin-bottom: 10px;">
+                        <h4 class="carousel-header" style="display: inline;"><u>Blender</u></h4>
+                        <img src="Images/Blender/Blender-Icon.png" class="hobby-icon" style="padding-bottom: 6px;">
+                      </div>
+                      <div id="carouselBlender" class="carousel slide" data-bs-interval="false" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                          <button type="button" data-bs-target="#carouselBlender" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                          <button type="button" data-bs-target="#carouselBlender" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                          <button type="button" data-bs-target="#carouselBlender" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                          <button type="button" data-bs-target="#carouselBlender" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                          <button type="button" data-bs-target="#carouselBlender" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                          <button type="button" data-bs-target="#carouselBlender" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                        </div>
+                        <div class="carousel-inner">
+                          <div class="carousel-item active" data-bs-interval="6000">
+                            <img class="carousel-image" src="Images/Blender/mom's house 1.png" class="d-block w-75" alt="...">
+                          </div>
+                          <div class="carousel-item" data-bs-interval="6000">
+                            <img class="carousel-image" src="Images/Blender/Imperial-Pint-Beer.png" class="d-block w-75" alt="...">
+                          </div>
+                          <div class="carousel-item" data-bs-interval="6000">
+                            <img class="carousel-image" src="Images/Blender/finished3_Done.png" class="d-block w-75" alt="...">
+                          </div>
+                          <div class="carousel-item" data-bs-interval="6000">
+                            <img class="carousel-image" src="Images/Blender/chessRender2.png" class="d-block w-75" alt="...">
+                          </div>
+                          <div class="carousel-item" data-bs-interval="6000">
+                            <img class="carousel-image" src="Images/Blender/519abcForever.png" class="d-block w-75" alt="...">
+                          </div>
+                          <div class="carousel-item" data-bs-interval="6000">
+                            <img class="carousel-image" src="Images/Blender/TheImageOfSpace.png" class="d-block w-75" alt="...">
+                          </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselBlender" data-bs-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselBlender" data-bs-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Next</span>
+                        </button>
+                      </div>
                     </div>
-                    <div id="carouselGaming" class="carousel slide" data-bs-interval="false" data-bs-ride="carousel">
-                      <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#carouselGaming" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#carouselGaming" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                        <button type="button" data-bs-target="#carouselGaming" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    <!--Gaming Carousel-->
+                    <div class="col">
+                      <div style="text-align: center; margin-bottom: 10px;">
+                        <h4 class="carousel-header" style="display: inline;"><u>Gaming</u></h4>
+                        <img src="Images/Gaming-Icon.png" class="hobby-icon" style="padding-bottom: 5px;">
                       </div>
-                      <div class="carousel-inner">
-                        <div class="carousel-item active" data-bs-interval="6000">
-                          <img class="carousel-image" src="Images/garden_of_words.jpg" class="d-block w-75" alt="...">
+                      <div id="carouselGaming" class="carousel slide" data-bs-interval="false" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                          <button type="button" data-bs-target="#carouselGaming" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                          <button type="button" data-bs-target="#carouselGaming" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                          <button type="button" data-bs-target="#carouselGaming" data-bs-slide-to="2" aria-label="Slide 3"></button>
                         </div>
-                        <div class="carousel-item" data-bs-interval="6000">
-                          <img class="carousel-image" src="..." class="d-block w-75" alt="...">
+                        <div class="carousel-inner">
+                          <div class="carousel-item active" data-bs-interval="6000">
+                            <img class="carousel-image" src="Images/garden_of_words.jpg" class="d-block w-75" alt="...">
+                          </div>
+                          <div class="carousel-item" data-bs-interval="6000">
+                            <img class="carousel-image" src="..." class="d-block w-75" alt="...">
+                          </div>
+                          <div class="carousel-item" data-bs-interval="6000">
+                            <img class="carousel-image" src="..." class="d-block w-75" alt="...">
+                          </div>
                         </div>
-                        <div class="carousel-item" data-bs-interval="6000">
-                          <img class="carousel-image" src="..." class="d-block w-75" alt="...">
-                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselGaming" data-bs-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselGaming" data-bs-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Next</span>
+                        </button>
                       </div>
-                      <button class="carousel-control-prev" type="button" data-bs-target="#carouselGaming" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                      </button>
-                      <button class="carousel-control-next" type="button" data-bs-target="#carouselGaming" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                      </button>
                     </div>
                   </div>
                 </div>
@@ -215,65 +217,63 @@
             </div>
           </div>
         </div>
-      </div>
-
+        
+      <!--Projects-->
+      <section class="content-section" style="margin-top: 4em;" id="portfolio">
+        <div class="container px-4 px-lg-5">
+            <div class="content-section-heading text-center">
+                <h2 class="mb-5">Recent Projects</h2>
+            </div>
+            <div class="row gx-3">
+                <div class="col-lg-6">
+                    <a class="portfolio-item" href="#!">
+                        <div class="caption">
+                            <div class="caption-content">
+                                <div class="h3">CST Transfer Dashboard</div>
+                                <p class="mb-0">Temple University Capstone Project</p>
+                            </div>
+                        </div>
+                        <img class="img-fluid" src="Images/Projects/CST_Transfer_Dashboard.png" alt="CST Transfer Dashboard" />
+                    </a>
+                </div>
+                <div class="col-lg-6">
+                    <a class="portfolio-item" href="#!">
+                        <div class="caption">
+                            <div class="caption-content">
+                                <div class="h3">Felix</div>
+                                <p class="mb-0">Pet Adoption Website - Temple University Project</p>
+                            </div>
+                        </div>
+                        <img class="img-fluid" src="Images/Projects/Felix.png" alt="..." />
+                    </a>
+                </div>
+                <div class="col-lg-6">
+                    <a class="portfolio-item" href="#!">
+                        <div class="caption">
+                            <div class="caption-content">
+                                <div class="h3">Java To-Do List</div>
+                                <p class="mb-0">Personal To-Do list project for brushing up on Java skills</p>
+                            </div>
+                        </div>
+                        <img class="img-fluid" src="Images/Projects/Eclipse-Icon.png" alt="..." />
+                    </a>
+                </div>
+                <div class="col-lg-6">
+                    <a class="portfolio-item" href="#!">
+                        <div class="caption">
+                            <div class="caption-content">
+                                <div class="h2">Workspace</div>
+                                <p class="mb-0">A yellow workspace with some scissors, pencils, and other objects.</p>
+                            </div>
+                        </div>
+                        <img class="img-fluid" src="Images/Projects/CIS-3342-Projects.png" alt="..." />
+                    </a>
+                </div>
+            </div>
+        </div>
+      </section>
     </div>
-
-    <!--Projects-->
-    <section class="content-section" style="margin-top: 4em;" id="portfolio">
-      <div class="container px-4 px-lg-5">
-          <div class="content-section-heading text-center">
-              <h2 class="mb-5">Recent Projects</h2>
-          </div>
-          <div class="row gx-3">
-              <div class="col-lg-6">
-                  <a class="portfolio-item" href="#!">
-                      <div class="caption">
-                          <div class="caption-content">
-                              <div class="h3">CST Transfer Dashboard</div>
-                              <p class="mb-0">Temple University Capstone Project</p>
-                          </div>
-                      </div>
-                      <img class="img-fluid" src="Images/CST_Transfer_Dashboard.png" alt="CST Transfer Dashboard" />
-                  </a>
-              </div>
-              <div class="col-lg-6">
-                  <a class="portfolio-item" href="#!">
-                      <div class="caption">
-                          <div class="caption-content">
-                              <div class="h3">Felix</div>
-                              <p class="mb-0">Pet Adoption Website - Temple University Project</p>
-                          </div>
-                      </div>
-                      <img class="img-fluid" src="Images/Felix.png" alt="..." />
-                  </a>
-              </div>
-              <div class="col-lg-6">
-                  <a class="portfolio-item" href="#!">
-                      <div class="caption">
-                          <div class="caption-content">
-                              <div class="h2">Strawberries</div>
-                              <p class="mb-0">Strawberries are such a tasty snack, especially with a little sugar on top!</p>
-                          </div>
-                      </div>
-                      <img class="img-fluid" src="Images/garden_of_words.jpg" alt="..." />
-                  </a>
-              </div>
-              <div class="col-lg-6">
-                  <a class="portfolio-item" href="#!">
-                      <div class="caption">
-                          <div class="caption-content">
-                              <div class="h2">Workspace</div>
-                              <p class="mb-0">A yellow workspace with some scissors, pencils, and other objects.</p>
-                          </div>
-                      </div>
-                      <img class="img-fluid" src="Images/garden_of_words.jpg" alt="..." />
-                  </a>
-              </div>
-          </div>
-      </div>
-  </section>
-
+  </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 

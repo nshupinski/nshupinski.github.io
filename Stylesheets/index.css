@@ -19,9 +19,10 @@ code {
 /*Header*/
 #headerBackground {
   background-image: url("../Images/foggy_hills_background.jpg");
-  height: 100vh;
+  height: 400vh;
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: fixed;
 }
 #headerBox {
   background: rgba(0, 0, 0, 0.85);
@@ -53,6 +54,15 @@ code {
   padding-top: 2em;
   padding-right: 0;
   padding-left: 0;
+}
+#aboutMeParContainer {
+  background-color: #a8bebb;
+  padding: 1em;
+  padding-bottom: 0.5em;
+  border-style: solid;
+  border-color: rgba(197, 197, 197, 0.767);
+  border-radius: 15px;
+  margin-bottom: 2.5em;
 }
 .accordion-item {
   border: none;
