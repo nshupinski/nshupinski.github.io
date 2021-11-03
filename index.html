@@ -16,7 +16,8 @@
 </head>
 
 <body>
-    <div id="root"></div>
+  
+  <div id="page-mask"></div>
 
     <div class="bg-img justify-content-center" id="headerBackground">
       
@@ -64,7 +65,7 @@
         <div class="container">
           <div class="row align-items-center justify-content-center">
             <h3 style="text-align: center; margin-bottom: 1.5em;">About Me</h3>
-            <img src="Images/About-Me-Pic.png" class="col-2" alt="Nick Shupinski Profile Picture" style="text-align: center; margin-bottom: 1.5 em;"/>
+            <img src="Images/About-Me-Pic.png" class="col-2" alt="Nick Shupinski Profile Picture" style="text-align: center; margin-bottom: 2em;"/>
           </div>
           <div class="row align-items-center">
             <div class="col">
@@ -226,7 +227,7 @@
             </div>
             <div class="row gx-3">
                 <div class="col-lg-6">
-                    <a class="portfolio-item" href="#!">
+                    <a class="portfolio-item" href="#!" onclick="showProj1Modal()">
                         <div class="caption">
                             <div class="caption-content">
                                 <div class="h3">CST Transfer Dashboard</div>
@@ -237,7 +238,7 @@
                     </a>
                 </div>
                 <div class="col-lg-6">
-                    <a class="portfolio-item" href="#!">
+                    <a class="portfolio-item" href="#!" onclick="showProj2Modal()">
                         <div class="caption">
                             <div class="caption-content">
                                 <div class="h3">Felix</div>
@@ -248,7 +249,7 @@
                     </a>
                 </div>
                 <div class="col-lg-6">
-                    <a class="portfolio-item" href="#!">
+                    <a class="portfolio-item" href="#!" onclick="showProj3Modal()">
                         <div class="caption">
                             <div class="caption-content">
                                 <div class="h3">Java To-Do List</div>
@@ -259,11 +260,11 @@
                     </a>
                 </div>
                 <div class="col-lg-6">
-                    <a class="portfolio-item" href="#!">
+                    <a class="portfolio-item" href="#!" onclick="showProj4Modal()">
                         <div class="caption">
                             <div class="caption-content">
-                                <div class="h2">Workspace</div>
-                                <p class="mb-0">A yellow workspace with some scissors, pencils, and other objects.</p>
+                                <div class="h2">Server-Side Web App Development Class Portfolio</div>
+                                <p class="mb-0">Class portfolio containing bookstore, restaurant review, and food order web applications.</p>
                             </div>
                         </div>
                         <img class="img-fluid" src="Images/Projects/CIS-3342-Projects.png" alt="..." />
@@ -271,7 +272,81 @@
                 </div>
             </div>
         </div>
+        
       </section>
+    </div>
+  </div>
+
+  <!--CST Dashboard Modal-->
+  <div class="modal" id="proj1Modal" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">CST Transfer Dashboard</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" onclick="hideProj1Modal()"></button>
+        </div>
+        <div class="modal-body">
+          <p>
+            CST-Transfer Dashboard is a web-based application designed for Academic Advisors, Students, and Faculty Advisors 
+            who are all part of the College of Science and Technology. This dashboard allows Academic Advisors to create tickets for 
+            transfer students, assign faculty advisors to a department, and edit a student's ticket information. For Students, 
+            the dashboard provides an easy and efficient way for them to upload required information for evaluation while also being 
+            able to receive feedback and track the ticket status throughout its lifecycle. For Faculty Advisors, it provides a 
+            faster and easier way to evaluate transfer students' courses and provide an evaluation equivalency for each course. 
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Felix Modal-->
+  <div class="modal" id="proj2Modal" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Felix</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" onclick="hideProj2Modal()"></button>
+        </div>
+        <div class="modal-body">
+          <p>Modal body text goes here.</p>
+        </div>
+        <div class="modal-footer justify-content-center">
+          <a type="button" class="btn btn-secondary" data-bs-dismiss="modal" href="https://github.com/nshupinski/CIS3342_TermProject-PetAdoption">Github</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Java To-Do Modal-->
+  <div class="modal" id="proj3Modal" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Java To-Do List</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" onclick="hideProj3Modal()"></button>
+        </div>
+        <div class="modal-body">
+          <p>Modal body text goes here.</p>
+        </div>
+        <div class="modal-footer justify-content-center">
+          <a type="button" class="btn btn-secondary" data-bs-dismiss="modal" href="https://github.com/nshupinski/Java-Task-List">Github</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Server-Side Modal-->
+  <div class="modal" id="proj4Modal" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Server-Side Web App Development Class Portfolio</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" onclick="hideProj4Modal()"></button>
+        </div>
+        <div class="modal-body">
+          <p>Modal body text goes here.</p>
+        </div>
+        <div class="modal-footer justify-content-center">
+          <a type="button" class="btn btn-secondary" data-bs-dismiss="modal" href="https://github.com/nshupinski/CIS3342_Solution">Github</a>
+        </div>
+      </div>
     </div>
   </div>
 

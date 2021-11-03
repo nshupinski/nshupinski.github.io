@@ -11,6 +11,16 @@ code {
     monospace;
 }
 
+#page-mask {
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -10;
+}
+
 /*Nav*/
 .blur {
   background: rgba(255, 255, 255, 0.41);
@@ -162,5 +172,19 @@ code {
     background-color: rgba(29, 128, 159, 0.9);
     -webkit-clip-path: inset(2rem);
     clip-path: inset(2rem);
+  }
+  .modal {
+    margin-top: 15%;
+  }
+  .modal-dialog {
+    max-width: 50%;
+  }
+  .modal-body {
+    padding: 1em;
+  }
+  /*Blur Effect*/
+  .is-blurred {
+    filter: blur(3px);
+    -webkit-filter: blur(3px);
   }
 }
