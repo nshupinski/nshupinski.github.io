@@ -29,7 +29,7 @@ code {
 /*Header*/
 #headerBackground {
   background-image: url("../Images/foggy_hills_background.jpg");
-  height: 400vh;
+  height: 420vh;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -173,6 +173,17 @@ code {
     -webkit-clip-path: inset(2rem);
     clip-path: inset(2rem);
   }
+
+  /*Blur Effect*/
+  .is-blurred {
+    filter: blur(3px);
+    -webkit-filter: blur(3px);
+  }
+
+  /* Modals */
+  .modal-header {
+    padding: 2em;
+  }
   .modal {
     margin-top: 15%;
   }
@@ -180,11 +191,12 @@ code {
     max-width: 50%;
   }
   .modal-body {
-    padding: 1em;
+    padding: 2em;
   }
-  /*Blur Effect*/
-  .is-blurred {
-    filter: blur(3px);
-    -webkit-filter: blur(3px);
+
+  /*Resume*/
+  #resume {
+    width: 60%;
+    text-align: center;
   }
 }
