@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html>
+
+<title>Nicholas Shupinski</title>
+
+<head>
+    <!-- Remote style sheet -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- Local Style Sheet -->
+    <link rel="stylesheet" href="Stylesheets/index.css">
+     
+    <!--Local Script File-->
+    <script src="Scripts/index.js"></script>
+
+</head>
+
+<body>
+  
+  <div id="page-mask"></div>
+
+    <div class="bg-img justify-content-center" id="headerBackground">
+      
+      <!--Nav-->
+      <nav class="navbar navbar-expand-lg navbar-light p-3 blur fixed-top">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Nicholas Shupinski</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">About Me</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Projects</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Resume</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <!--Header-->
+      <section class="container-fluid" style="height: 100vh;">
+        <div class="row" style="position: relative;">
+          <div id="headerStyleBlock"></div>
+          <div class="col-9 d-flex flex-wrap align-content-center" id="headerBox">
+            <img id="headerPic" class="col-9 col-sm-5" src="images/youngbullEaster.jpg" alt="Nicholas Shupinski Headshot"/>
+            <h2 id="headerName" class="offset-5"><b>Nicholas<br/>Shupinski</b></h2>
+          </div>
+        </div>
+      </section>
+
+      <!--About-->
+      <div class="container-fluid justify-content-center" id="about-container">
+        <div class="container">
+          <div class="row align-items-center justify-content-center">
+            <h3 style="text-align: center; margin-bottom: 1.5em;">About Me</h3>
+            <img src="Images/About-Me-Pic.png" class="col-sm-2 col-5" alt="Nick Shupinski Profile Picture" style="text-align: center; margin-bottom: 2em;"/>
+          </div>
+          <div class="row align-items-center">
+            <div class="col">
+              <div id="aboutMeParContainer">
+                <p>Hi I'm Nick! I live in Philadelphia and graduated from Temple University with a B.S. in Information Science and Technology. 
+                  I love my cats Bacon and Kiwi, and my fish Commodore Gills more than anything in the world (Keep an eye out for them hidden on this site),
+                  and I spend my free time rock climbing, 3D modeling using a software called Blender, playing PC games, and working on personal coding projects.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--Accordion-->
+        <div class="accordion" id="accordion">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+              <button class="accordion-button" type="button" id="btnAccord" onclick="btnAccord_Clicked()" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                More About My Personal Hobbies
+              </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordion">
+              <div class="accordion-body">
+                <!--Climbing Carousel-->
+                <div class="row">
+                  <div class="col">
+                    <div style="text-align: center; margin-bottom: 10px;">
+                      <h4 class="carousel-header" style="display: inline;"><u>Rock Climbing</u></h4>
+                      <img src="Images/Climbing/Climbing-Icon.png" class="hobby-icon">
+                    </div>
+                    <div id="carouselClimbing" class="carousel slide" data-bs-interval="false" data-bs-ride="carousel">
+                      <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselClimbing" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselClimbing" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselClimbing" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        <button type="button" data-bs-target="#carouselClimbing" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                        <button type="button" data-bs-target="#carouselClimbing" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                        <button type="button" data-bs-target="#carouselClimbing" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                      </div>
+                      <div class="carousel-inner">
+                        <div class="carousel-item active" data-bs-interval="6000">
+                          <img class="carousel-image" src="Images/Climbing/WCU -18 (46 of 100).jpg" class="d-block w-75" alt="...">
+                        </div>
+                        <div class="carousel-item" data-bs-interval="6000">
+                          <img class="carousel-image" src="Images/Climbing/FB_IMG_1576892447409.jpg" class="d-block w-75" alt="...">
+                        </div>
+                        <div class="carousel-item" data-bs-interval="6000">
+                          <img class="carousel-image" src="Images/Climbing/Screenshot_20200209-145558.png" class="d-block w-75" alt="...">
+                        </div>
+                        <div class="carousel-item" data-bs-interval="6000">
+                          <img class="carousel-image" src="Images/Climbing/IMG_4784.JPG" class="d-block w-75" alt="...">
+                        </div>
+                        <div class="carousel-item" data-bs-interval="6000">
+                          <img class="carousel-image" src="Images/Climbing/Screenshot 2021-10-20 163150.png" class="d-block w-75" alt="...">
+                        </div>
+                        <div class="carousel-item" data-bs-interval="6000">
+                          <img class="carousel-image" src="Images/Climbing/IMG_4601.JPG" class="d-block w-75" alt="...">
+                        </div>
+                      </div>
+                      <button class="carousel-control-prev" type="button" data-bs-target="#carouselClimbing" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                        <span class="visually-hidden">Previous</span>
+                      </button>
+                      <button class="carousel-control-next" type="button" data-bs-target="#carouselClimbing" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                      </button>
+                    </div>
+                  </div>
+                    <!--Blender Carousel-->
+                    <div class="col">
+                      <div style="text-align: center; margin-bottom: 10px;">
+                        <h4 class="carousel-header" style="display: inline;"><u>Blender</u></h4>
+                        <img src="Images/Blender/Blender-Icon.png" class="hobby-icon" style="padding-bottom: 6px;">
+                      </div>
+                      <div id="carouselBlender" class="carousel slide" data-bs-interval="false" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                          <button type="button" data-bs-target="#carouselBlender" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                          <button type="button" data-bs-target="#carouselBlender" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                          <button type="button" data-bs-target="#carouselBlender" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                          <button type="button" data-bs-target="#carouselBlender" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                          <button type="button" data-bs-target="#carouselBlender" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                          <button type="button" data-bs-target="#carouselBlender" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                        </div>
+                        <div class="carousel-inner">
+                          <div class="carousel-item active" data-bs-interval="6000">
+                            <img class="carousel-image" src="Images/Blender/mom's house 1.png" class="d-block w-75" alt="...">
+                          </div>
+                          <div class="carousel-item" data-bs-interval="6000">
+                            <img class="carousel-image" src="Images/Blender/Imperial-Pint-Beer.png" class="d-block w-75" alt="...">
+                          </div>
+                          <div class="carousel-item" data-bs-interval="6000">
+                            <img class="carousel-image" src="Images/Blender/finished3_Done.png" class="d-block w-75" alt="...">
+                          </div>
+                          <div class="carousel-item" data-bs-interval="6000">
+                            <img class="carousel-image" src="Images/Blender/chessRender2.png" class="d-block w-75" alt="...">
+                          </div>
+                          <div class="carousel-item" data-bs-interval="6000">
+                            <img class="carousel-image" src="Images/Blender/519abcForever.png" class="d-block w-75" alt="...">
+                          </div>
+                          <div class="carousel-item" data-bs-interval="6000">
+                            <img class="carousel-image" src="Images/Blender/TheImageOfSpace.png" class="d-block w-75" alt="...">
+                          </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselBlender" data-bs-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselBlender" data-bs-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Next</span>
+                        </button>
+                      </div>
+                    </div>
+                    <!--Gaming Carousel-->
+                    <div class="col">
+                      <div style="text-align: center; margin-bottom: 10px;">
+                        <h4 class="carousel-header" style="display: inline;"><u>Gaming</u></h4>
+                        <img src="Images/Gaming-Icon.png" class="hobby-icon" style="padding-bottom: 5px;">
+                      </div>
+                      <div id="carouselGaming" class="carousel slide" data-bs-interval="false" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                          <button type="button" data-bs-target="#carouselGaming" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                          <button type="button" data-bs-target="#carouselGaming" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                          <button type="button" data-bs-target="#carouselGaming" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        </div>
+                        <div class="carousel-inner">
+                          <div class="carousel-item active" data-bs-interval="6000">
+                            <img class="carousel-image" src="Images/garden_of_words.jpg" class="d-block w-75" alt="...">
+                          </div>
+                          <div class="carousel-item" data-bs-interval="6000">
+                            <img class="carousel-image" src="..." class="d-block w-75" alt="...">
+                          </div>
+                          <div class="carousel-item" data-bs-interval="6000">
+                            <img class="carousel-image" src="..." class="d-block w-75" alt="...">
+                          </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselGaming" data-bs-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselGaming" data-bs-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Next</span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      <!--Projects-->
+      <section class="content-section" style="margin-top: 4em;" id="portfolio">
+        <div class="container px-4 px-lg-5">
+            <div class="content-section-heading text-center">
+                <h2 class="mb-5">Recent Projects</h2>
+            </div>
+            <div class="row gx-3">
+                <div class="col-lg-6">
+                    <a class="portfolio-item" href="#!" onclick="showProj1Modal()">
+                        <div class="caption">
+                            <div class="caption-content">
+                                <div class="h3">CST Transfer Dashboard</div>
+                                <p class="mb-0">Temple University Capstone Project</p>
+                            </div>
+                        </div>
+                        <img class="img-fluid" src="Images/Projects/CST_Transfer_Dashboard.png" alt="CST Transfer Dashboard" />
+                    </a>
+                </div>
+                <div class="col-lg-6">
+                    <a class="portfolio-item" href="#!" onclick="showProj2Modal()">
+                        <div class="caption">
+                            <div class="caption-content">
+                                <div class="h3">Felix</div>
+                                <p class="mb-0">Pet Adoption Website - Temple University Project</p>
+                            </div>
+                        </div>
+                        <img class="img-fluid" src="Images/Projects/Felix.png" alt="..." />
+                    </a>
+                </div>
+                <div class="col-lg-6">
+                    <a class="portfolio-item" href="#!" onclick="showProj3Modal()">
+                        <div class="caption">
+                            <div class="caption-content">
+                                <div class="h3">Java To-Do List</div>
+                                <p class="mb-0">Personal To-Do list project for brushing up on Java skills</p>
+                            </div>
+                        </div>
+                        <img class="img-fluid" src="Images/Projects/Eclipse-Icon.png" alt="..." />
+                    </a>
+                </div>
+                <div class="col-lg-6">
+                    <a class="portfolio-item" href="#!" onclick="showProj4Modal()">
+                        <div class="caption">
+                            <div class="caption-content">
+                                <div class="h2">Server-Side Web App Development Class Portfolio</div>
+                                <p class="mb-0">Class portfolio containing bookstore, restaurant review, and food order web applications.</p>
+                            </div>
+                        </div>
+                        <img class="img-fluid" src="Images/Projects/CIS-3342-Projects.png" alt="..." />
+                    </a>
+                </div>
+            </div>
+        </div>
+      </section>
+
+      <!--Resume-->
+      <section class="content-section" style="margin-top: 4em;" id="portfolio">
+        <div class="container px-4 px-lg-5">
+            <div class="content-section-heading text-center">
+                <h2 class="mb-5">Resume</h2>
+            </div>
+        </div>
+        <div style="text-align: center;">
+          <img src="Images/Nicholas-Shupinski_Resume-1.png" id="resume" alt="Resume"/>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <!--CST Dashboard Modal-->
+  <div class="modal" id="proj1Modal" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header" style="background-color: rgb(29, 29, 29);">
+          <h5 class="modal-title" style="color: rgb(202, 202, 202); margin-right: 2em;">CST Transfer Dashboard</h5>
+          <img src="Images/Projects/Temple_T_logo.png" style="width: 3em;"/>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" style="background-color: white;" onclick="hideProj1Modal()"></button>
+        </div>
+        <div class="modal-body" style="background-color: rgb(29, 29, 29);">
+          <p style="color: rgb(202, 202, 202);">
+            CST-Transfer Dashboard is a web-based application designed for Academic Advisors, Students, and Faculty Advisors 
+            who are all part of the College of Science and Technology. This dashboard allows Academic Advisors to create tickets for 
+            transfer students, assign faculty advisors to a department, and edit a student's ticket information. For Students, 
+            the dashboard provides an easy and efficient way for them to upload required information for evaluation while also being 
+            able to receive feedback and track the ticket status throughout its lifecycle. For Faculty Advisors, it provides a 
+            faster and easier way to evaluate transfer students' courses and provide an evaluation equivalency for each course. 
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Felix Modal-->
+  <div class="modal" id="proj2Modal" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header" style="background-color: rgb(58, 157, 86);">
+          <h5 class="modal-title" style="margin-right: 1em;">Felix</h5>
+          <img src="Images/Projects/FelixCat.png" style="width: 3em;"/>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" onclick="hideProj2Modal()"></button>
+        </div>
+        <div class="modal-body">
+          <p>Modal body text goes here.</p>
+        </div>
+        <div class="modal-footer justify-content-center" style="background-color: rgb(58, 157, 86);">
+          <a type="button" class="btn btn-secondary" target="_blank" data-bs-dismiss="modal" href="https://github.com/nshupinski/CIS3342_TermProject-PetAdoption">Github</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Java To-Do Modal-->
+  <div class="modal" id="proj3Modal" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header" style="background-color: rgb(37, 27, 62);">
+          <h5 class="modal-title" style="margin-right: 1em; color: white;">Java To-Do List</h5>
+          <img src="Images/Projects/Eclipse-logo.png" style="width: 3em;"/>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" style="background-color: white;" onclick="hideProj3Modal()"></button>
+        </div>
+        <div class="modal-body">
+          <p>Modal body text goes here.</p>
+        </div>
+        <div class="modal-footer justify-content-center" style="background-color: rgb(37, 27, 62);">
+          <a type="button" class="btn btn-secondary" target="_blank" data-bs-dismiss="modal" href="https://github.com/nshupinski/Java-Task-List">Github</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Server-Side Modal-->
+  <div class="modal" id="proj4Modal" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Server-Side Web App Development Class Portfolio</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" onclick="hideProj4Modal()"></button>
+        </div>
+        <div class="modal-body">
+          <p>Modal body text goes here.</p>
+        </div>
+        <div class="modal-footer justify-content-center">
+          <a type="button" class="btn btn-secondary" target="_blank" data-bs-dismiss="modal" href="https://github.com/nshupinski/CIS3342_Solution">Github</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

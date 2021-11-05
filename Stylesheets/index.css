@@ -1,0 +1,250 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+#page-mask {
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -10;
+}
+
+/*Nav*/
+.blur {
+  background: rgba(255, 255, 255, 0.41);
+}
+
+/*Header*/
+#headerBackground {
+  background-image: url("../Images/foggy_hills_background.jpg");
+  height: 420vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+#headerBox {
+  background: rgba(0, 0, 0, 0.85);
+  height: 75vh;
+  margin-top: 15vh;
+  /*margin-left: 3em;*/
+}
+#headerStyleBlock {
+  height: 84vh;
+  width: 3em;
+  background-color: #1c2b45;
+  margin-top: 10vh;
+  margin-left: 2em;
+}
+#headerName {
+  position: absolute;
+  top: 28vh;
+  color: #577a75;
+  font-size: 9vw;
+  margin-left: 4.1em;
+}
+#headerPic {
+  margin-left: 4vw;
+}
+/* For Mobile */
+@media screen and (max-width: 576px) {
+  #headerName {
+    display: inline-block;
+    margin-left: 0;
+    top: 21vh;
+    font-size: 8vh;
+  }
+  .offset-5 {
+    margin-left: 0;
+  }
+  #headerPic {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 14vh;
+  }
+  #resume {
+    width: 94vw;
+  }
+}
+
+/* For Tablets */
+@media screen and (min-width: 576px) and (max-width: 780px) {
+  #headerName {
+    display: inline-block;
+    margin-left: 0;
+    top: 21vh;
+    font-size: 8vh;
+  }
+  .offset-5 {
+    margin-left: 0;
+  }
+  #headerPic {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20vh;
+    width: 42vh;
+  }
+  #resume {
+    width: 94vw;
+  }
+}
+
+/*---------------------------------------------*/
+
+/*About Me*/
+#about-container {
+  background-color: #577a75;
+  padding-top: 2em;
+  padding-right: 0;
+  padding-left: 0;
+}
+#aboutMeParContainer {
+  background-color: #a8bebb;
+  padding: 1em;
+  padding-bottom: 0.5em;
+  border-style: solid;
+  border-color: rgba(197, 197, 197, 0.767);
+  border-radius: 15px;
+  margin-bottom: 2.5em;
+}
+.accordion-item {
+  border: none;
+  border-radius: 0;
+}
+.accordion-body {
+  padding: 0em;
+  background-color: #577a75;
+}
+.accordion-body .col {
+  padding-top: 1em;
+  padding-bottom: 1em;
+  border-style: solid;
+}
+.accordion-button:not(.collapsed) {
+  color: black;
+  background-color: #a6b6b4;
+  text-align: center;
+  padding-left: 40%;
+  padding-right: 40%;
+}
+.carousel-image {
+  width: 100%;
+  height: 20em;
+  object-fit: contain;
+}
+.carousel-header {
+  text-align: center;
+}
+.hobby-icon {
+  width: 2em;
+  display: inline;
+}
+
+/*---------------------------------------------*/
+
+/*Projects*/
+.portfolio-item {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  max-width: 530px;
+  margin: auto auto 1rem;
+}
+.portfolio-item .caption {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(33, 37, 41, 0.2);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+}
+.portfolio-item .caption .caption-content {
+  color: #fff;
+  margin: auto 2rem 2rem;
+}
+.portfolio-item .caption .caption-content h2,
+.portfolio-item .caption .caption-content .h2 {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+}
+.portfolio-item .caption .caption-content p {
+  font-weight: 300;
+  font-size: 1.2rem;
+}
+@media (min-width: 992px) {
+  .portfolio-item {
+    max-width: none;
+    /*margin: 0;*/
+  }
+  .portfolio-item .caption {
+    transition: background-color 0.7s, -webkit-clip-path 0.25s ease-out;
+    transition: clip-path 0.25s ease-out, background-color 0.7s;
+    transition: clip-path 0.25s ease-out, background-color 0.7s,
+      -webkit-clip-path 0.25s ease-out;
+    -webkit-clip-path: inset(0px);
+    clip-path: inset(0px);
+  }
+  .portfolio-item .caption .caption-content {
+    transition: opacity 0.25s;
+    margin-left: 5rem;
+    margin-right: 5rem;
+    margin-bottom: 5rem;
+  }
+  .portfolio-item img {
+    transition: -webkit-clip-path 0.25s ease-out;
+    transition: clip-path 0.25s ease-out;
+    transition: clip-path 0.25s ease-out, -webkit-clip-path 0.25s ease-out;
+    -webkit-clip-path: inset(-1px);
+    clip-path: inset(-1px);
+  }
+  .portfolio-item:hover img {
+    -webkit-clip-path: inset(2rem);
+    clip-path: inset(2rem);
+  }
+  .portfolio-item:hover .caption {
+    background-color: rgba(29, 128, 159, 0.9);
+    -webkit-clip-path: inset(2rem);
+    clip-path: inset(2rem);
+  }
+
+  /*Blur Effect*/
+  .is-blurred {
+    filter: blur(3px);
+    -webkit-filter: blur(3px);
+  }
+
+  /* Modals */
+  .modal-header {
+    padding: 2em;
+  }
+  .modal {
+    margin-top: 15%;
+  }
+  .modal-dialog {
+    max-width: 50%;
+  }
+  .modal-body {
+    padding: 2em;
+  }
+
+  /*---------------------------------------------*/
+
+  /*Resume*/
+  #resume {
+    width: 60%;
+    text-align: center;
+  }
+}
