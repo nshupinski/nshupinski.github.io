@@ -49,10 +49,12 @@ code {
 }
 #headerName {
   position: absolute;
-  top: 28vh;
   color: #577a75;
   font-size: 9vw;
   margin-left: 4.1em;
+  top: 54%;
+  left: 26%;
+  transform: translate(-50%, -50%);
 }
 #headerPic {
   margin-left: 4vw;
@@ -60,6 +62,7 @@ code {
 /* For Mobile */
 @media screen and (max-width: 576px) {
   #headerName {
+    position: relative;
     display: inline-block;
     margin-left: 0;
     top: 21vh;
