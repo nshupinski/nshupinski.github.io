@@ -13,6 +13,8 @@
     <!--Local Script File-->
     <script src="Scripts/index.js"></script>
 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 </head>
 
 <body>
@@ -22,22 +24,22 @@
     <div class="bg-img justify-content-center" id="headerBackground">
       
       <!--Nav-->
-      <nav class="navbar navbar-expand-lg navbar-light p-3 blur fixed-top">
+      <nav class="navbar navbar-expand-lg navbar-light p-3 blur fixed-top" id="nav">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">Nicholas Shupinski</a>
+          <a class="navbar-brand" id="logo" href="#">Nicholas Shupinski |</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">About Me</a>
+              <li class="nav-item" id="hehe">
+                <a class="nav-link active" aria-current="page" href="#about-container">About Me</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Projects</a>
+                <a class="nav-link" href="#portfolio">Projects</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Resume</a>
+                <a class="nav-link" href="#resumeSec">Resume</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Contact</a>
@@ -50,10 +52,10 @@
       <!--Header-->
       <section class="container-fluid" style="height: 100vh;">
         <div class="row" style="position: relative;">
-          <div id="headerStyleBlock"></div>
-          <div class="col-9 d-flex flex-wrap align-content-center" id="headerBox">
+          <!--<div id="headerStyleBlock"></div>-->
+          <div class="col-11 d-flex flex-wrap align-content-center" id="headerBox">
             <img id="headerPic" class="col-9 col-sm-5" src="Images/youngbullEaster.jpg" alt="Nicholas Shupinski Headshot"/>
-            <h2 id="headerName" class="offset-5"><b>Nicholas<br/>Shupinski</b></h2>
+            <h2 id="headerName"><b>Nicholas<br/>Shupinski</b></h2>
           </div>
         </div>
       </section>
@@ -273,14 +275,14 @@
       </section>
 
       <!--Resume-->
-      <section class="content-section" style="margin-top: 4em;" id="portfolio">
+      <section class="content-section" style="margin-top: 4em;" id="resumeSec">
         <div class="container px-4 px-lg-5">
             <div class="content-section-heading text-center">
                 <h2 class="mb-5">Resume</h2>
             </div>
         </div>
         <div style="text-align: center;">
-          <!--<img src="Images/Nicholas-Shupinski_Resume-1.png" id="resume" alt="Resume"/>-->
+          <img src="Images/Nicholas-Shupinski_Resume-1.png" id="resume" alt="Resume"/>
         </div>
       </section>
     </div>
@@ -318,7 +320,12 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" onclick="hideProj2Modal()"></button>
         </div>
         <div class="modal-body">
-          <p>Modal body text goes here.</p>
+          <p>
+            This project was a pet adoption website where pet adopters could find an animal they're compatible with and shelters 
+            could post pets in their care. It gave me experience with building Web APIs (REST and SOAP) and building a 
+            safe multi-tier login and registration system. The registration/login system contained forgotten password recovery, 
+            security questions and email validation.
+          </p>
         </div>
         <div class="modal-footer justify-content-center" style="background-color: rgb(58, 157, 86);">
           <a type="button" class="btn btn-secondary" target="_blank" data-bs-dismiss="modal" href="https://github.com/nshupinski/CIS3342_TermProject-PetAdoption">Github</a>
@@ -336,7 +343,12 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" style="background-color: white;" onclick="hideProj3Modal()"></button>
         </div>
         <div class="modal-body">
-          <p>Modal body text goes here.</p>
+          <p>
+            This was my most recent project that I completed after graduating from Temple to brush up on my Java
+            coding skills. This simple personal project was creating a task list where you could add, edit, complete, or remove tasks and
+            create new lists to organize your thoughts. I first made a console command version, and then created a UI to 
+            learn more about Java Swing UI building.
+          </p>
         </div>
         <div class="modal-footer justify-content-center" style="background-color: rgb(37, 27, 62);">
           <a type="button" class="btn btn-secondary" target="_blank" data-bs-dismiss="modal" href="https://github.com/nshupinski/Java-Task-List">Github</a>
