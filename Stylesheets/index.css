@@ -23,7 +23,15 @@ code {
 
 /*Nav*/
 .blur {
-  background: rgba(255, 255, 255, 0.41);
+  background: rgba(255, 255, 255, 0);
+}
+.nav-link {
+  color: #577a75 !important;
+  font-weight: bold;
+}
+#logo {
+  color: #577a75 !important;
+  font-weight: bold;
 }
 
 /*Header*/
@@ -36,9 +44,8 @@ code {
 }
 #headerBox {
   background: rgba(0, 0, 0, 0.85);
-  height: 75vh;
-  margin-top: 15vh;
-  /*margin-left: 3em;*/
+  height: 30vh;
+  margin-top: 34vh;
 }
 #headerStyleBlock {
   height: 84vh;
@@ -50,20 +57,22 @@ code {
 #headerName {
   position: absolute;
   color: #577a75;
-  font-size: 9vw;
+  font-size: 6vw;
   margin-left: 4.1em;
-  top: 54%;
-  left: 26%;
+  top: 75%;
+  left: 51%;
   transform: translate(-50%, -50%);
 }
 #headerPic {
-  margin-left: 4vw;
+  margin-left: 8vw;
+  border-style: solid;
+  border-width: 2em;
+  border-color: rgba(255, 255, 255, 0.7);
 }
 /* For Mobile */
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 767px) {
   #headerName {
     position: relative;
-    display: inline-block;
     margin-left: 0;
     top: 21vh;
     font-size: 8vh;
@@ -82,7 +91,7 @@ code {
 }
 
 /* For Tablets */
-@media screen and (min-width: 576px) and (max-width: 780px) {
+@media screen and (min-width: 768px) and (max-width: 1023px) {
   #headerName {
     display: inline-block;
     margin-left: 0;
