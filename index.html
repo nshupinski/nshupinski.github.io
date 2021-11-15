@@ -6,12 +6,17 @@
 <head>
     <!-- Remote style sheet -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
     <!-- Local Style Sheet -->
     <link rel="stylesheet" href="Stylesheets/index.css">
+    <link rel="stylesheet" href="Stylesheets/form-styles.css">
      
+
     <!--Local Script File-->
     <script src="Scripts/index.js"></script>
+    <!-- SMTP Script For Sending Emails-->
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <!-- Email JS -->
+    <script src="Scripts/email.js"></script>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -42,7 +47,7 @@
                 <a class="nav-link" href="#resumeSec">Resume</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Contact</a>
+                <a class="nav-link" href="#contact">Contact</a>
               </li>
             </ul>
           </div>
@@ -52,8 +57,7 @@
       <!--Header-->
       <section class="container-fluid" style="height: 100vh;">
         <div class="row" style="position: relative;">
-          <!--<div id="headerStyleBlock"></div>-->
-          <div class="col-11 d-flex flex-wrap align-content-center" id="headerBox">
+          <div class="col-11 d-flex flex-wrap align-content-center shadow" id="headerBox">
             <img id="headerPic" class="col-9 col-sm-5" src="Images/youngbullEaster.jpg" alt="Nicholas Shupinski Headshot"/>
             <h2 id="headerName"><b>Nicholas<br/>Shupinski</b></h2>
           </div>
@@ -285,6 +289,34 @@
           <img src="Images/Nicholas-Shupinski_Resume-1.png" id="resume" alt="Resume"/>
         </div>
       </section>
+
+      <!--Contact-->
+      <section>
+        <div class="container px-4 px-lg-5" style="margin-top: 4em;" id="contact">
+            <div class="content-section-heading text-center">
+                <h2 class="mb-5">Contact Me</h2>
+            </div>
+        </div>
+        <div id="contact-form">
+            <label for="name">Your Name</label>
+            <input type="text" id="contactName" name="yourname" placeholder="Your name..">
+        
+            <label for="subject">Subject</label>
+            <input type="text" id="contactSubject" name="subject" placeholder="Write something..">
+        
+            <label for="Message">Message</label>
+            <textarea id="contactMessage" name="message" placeholder="Your message here.." style="height:200px"></textarea>
+        
+            <input type="submit" value="Submit" onclick="sendEmail()" class="d-flex">
+        </div>
+        <div class="alert alert-success" id="alert-success" role="alert">
+          Message Sent - Thank you!
+        </div>
+        <div class="alert alert-danger" id="alert-fail" role="alert">
+          *Information Missing*
+        </div>
+      </section>
+
     </div>
   </div>
 
