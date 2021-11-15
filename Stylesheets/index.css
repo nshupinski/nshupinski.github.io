@@ -37,7 +37,7 @@ code {
 /*Header*/
 #headerBackground {
   background-image: url("../Images/foggy_hills_background.jpg");
-  height: 420vh;
+  height: 500vh;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -46,13 +46,6 @@ code {
   background: rgba(0, 0, 0, 0.85);
   height: 30vh;
   margin-top: 34vh;
-}
-#headerStyleBlock {
-  height: 84vh;
-  width: 3em;
-  background-color: #1c2b45;
-  margin-top: 10vh;
-  margin-left: 2em;
 }
 #headerName {
   position: absolute;
