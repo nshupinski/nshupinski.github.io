@@ -25,12 +25,13 @@ code {
 .blur {
   background: rgba(255, 255, 255, 0);
 }
-.nav-link {
-  color: #577a75 !important;
+.navbar-light .navbar-nav .nav-link {
+  color: rgba(255, 255, 255, 0.75);
   font-weight: bold;
 }
 #logo {
-  color: #577a75 !important;
+  /* color: #577a75 !important; */
+  color: rgba(255, 255, 255, 0.75);
   font-weight: bold;
 }
 
@@ -49,7 +50,8 @@ code {
 }
 #headerName {
   position: absolute;
-  color: #577a75;
+  /* color: #577a75; */
+  color: rgba(255, 255, 255, 0.75);
   font-size: 6vw;
   margin-left: 4.1em;
   top: 75%;
@@ -108,9 +110,17 @@ code {
 /*---------------------------------------------*/
 
 /*About Me*/
+#about-me-pic {
+  text-align: center;
+  margin-bottom: 2em;
+  padding: 0;
+  border-radius: 50%;
+  box-shadow: 5px 5px 5px;
+}
+
 #about-container {
   background-color: #577a75;
-  padding-top: 2em;
+  padding-top: 3em;
   padding-right: 0;
   padding-left: 0;
 }

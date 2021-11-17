@@ -11,10 +11,6 @@ window.addEventListener("scroll",function(){
     /* Top */
     if(perc < 1 && perc > 0){
         nav.style.background = "rgba(255, 255, 255, 0.1)";
-        var navs = document.getElementsByClassName("nav-link");
-        for(i = 0; i < navs.length; i++) {
-            navs[i].style.fontWeight = "bold";
-        }
       }
       /* 1% */
       if(perc < 2 && perc > 1){
@@ -26,19 +22,10 @@ window.addEventListener("scroll",function(){
       }
       /* 3% */
       if(perc > 3){
-        var navs = document.getElementsByClassName("nav-link");
-        for(i = 0; i < navs.length; i++) {
-            navs[i].style.color = "black !important";
-            navs[i].style.fontWeight = "normal";
-        }
-        var logo = this.document.getElementById("logo");
-        logo.style.color = "rgba(0, 0, 0)";
+        navScrollDown();
       }
       if(perc < 3){
-        var navs = document.getElementsByClassName("nav-link");
-        for(i = 0; i < navs.length; i++) {
-            navs[i].style.fontWeight = "bold";
-        }
+        navScrollUp();
       }
       if(perc < 4 && perc > 3){
         nav.style.background = "rgba(255, 255, 255, 0.4)";
@@ -63,7 +50,27 @@ window.addEventListener("scroll",function(){
       if(perc < 9 && perc > 8){
         nav.style.background = "rgba(255, 255, 255, 1)";
       }
+      /* >9% */
+      if(perc > 9){
+        nav.style.background = "rgba(255, 255, 255, 1)";
+      }
 });
+
+
+function navScrollDown() {
+  document.getElementById("logo").style.color = "#577a75";
+  document.getElementById("about-me-nav").style.color = "#577a75";
+  document.getElementById("projects-nav").style.color = "#577a75";
+  document.getElementById("resume-nav").style.color = "#577a75";
+  document.getElementById("contact-nav").style.color = "#577a75";
+}
+function navScrollUp() {
+  document.getElementById("logo").style.color = "rgba(255, 255, 255, 0.75)";
+  document.getElementById("about-me-nav").style.color = "rgba(255, 255, 255, 0.75)";
+  document.getElementById("projects-nav").style.color = "rgba(255, 255, 255, 0.75)";
+  document.getElementById("resume-nav").style.color = "rgba(255, 255, 255, 0.75)";
+  document.getElementById("contact-nav").style.color = "rgba(255, 255, 255, 0.75)";
+}
 
 function getScrollPercent() {
     var h = document.documentElement, 
