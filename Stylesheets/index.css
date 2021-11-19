@@ -38,7 +38,7 @@ code {
 /*Header*/
 #headerBackground {
   background-image: url("../Images/foggy_hills_background.jpg");
-  height: 500vh;
+  height: 100%;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -54,8 +54,8 @@ code {
   color: rgba(255, 255, 255, 0.75);
   font-size: 6vw;
   margin-left: 4.1em;
-  top: 75%;
-  left: 51%;
+  /* top: 75%; */
+  /* left: 51%; */
   transform: translate(-50%, -50%);
 }
 #headerPic {
@@ -117,7 +117,6 @@ code {
   border-radius: 50%;
   box-shadow: 5px 5px 5px;
 }
-
 #about-container {
   background-color: #577a75;
   padding-top: 3em;
@@ -132,6 +131,7 @@ code {
   border-color: rgba(197, 197, 197, 0.767);
   border-radius: 15px;
   margin-bottom: 2.5em;
+  box-shadow: 5px 5px 5px;
 }
 .accordion-item {
   border: none;
@@ -261,5 +261,13 @@ code {
   #resume {
     width: 60%;
     text-align: center;
+  }
+
+  /* Contact */
+  #contact {
+    margin-top: 4em;
+  }
+  #contact-form {
+    margin-top: 4em;
   }
 }
