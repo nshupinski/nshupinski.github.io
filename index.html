@@ -85,12 +85,12 @@
         <!--Accordion-->
         <div class="accordion" id="accordion">
           <div class="accordion-item">
-            <h2 class="accordion-header" id="headingOne">
+            <h2 class="accordion-header" style="display: none;" id="headingOne">
               <button class="accordion-button" type="button" id="btnAccord" onclick="btnAccord_Clicked()" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                 More About My Personal Hobbies
               </button>
             </h2>
-            <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordion">
+            <div id="collapseOne" class="accordion-collapse" aria-labelledby="headingOne" data-bs-parent="#accordion">
               <div class="accordion-body">
                 <!--Climbing Carousel-->
                 <div class="row">
@@ -392,14 +392,17 @@
   <div class="modal" id="proj4Modal" tabindex="-1">
     <div class="modal-dialog">
       <div class="modal-content">
-        <div class="modal-header">
+        <div class="modal-header" style="background-color: #C8C4BE;">
           <h5 class="modal-title">Server-Side Web App Development Class Portfolio</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" onclick="hideProj4Modal()"></button>
         </div>
         <div class="modal-body">
-          <p>Modal body text goes here.</p>
+          <p>These projects were created during my Temple course, <i>Server-Side Web Application Developing</i>, and were focused on skills such as 
+          database integration, web services, APIs, and dynamic and adaptive web page building. All of these projects contain elements of live database
+          updating using stored procedures that utilize SQL (Structured Query Language), pages that will populate via back-end/front-end code, and some that 
+          utilize AJAX synchronous and non synchronus requests.</p>
         </div>
-        <div class="modal-footer justify-content-center">
+        <div class="modal-footer justify-content-center" style="background-color: #C8C4BE;">
           <a type="button" class="btn btn-secondary" target="_blank" data-bs-dismiss="modal" href="https://github.com/nshupinski/CIS3342_Solution">Github</a>
         </div>
       </div>
