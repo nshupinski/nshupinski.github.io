@@ -2,15 +2,8 @@
 window.onload = function () {
   $('#carouselBlender').on('slide.bs.carousel', function onSlide (ev) {
     var id = ev.relatedTarget.id;
-    switch (id) {
-      case "2":
-        alert("hey");
-        break;
-      case "3":
-        alert(id);
-        break;
-      default:
-        //the id is none of the above
+    if (id == "blender2") {
+      document.getElementById(id).style.width = "32%";
     }
   })
 };
