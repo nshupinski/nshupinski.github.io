@@ -153,7 +153,7 @@ code {
   padding-right: 40%;
 }
 .carousel {
-  height: 330px;
+  /* height: 330px; */
 }
 .carousel-image {
   object-fit: contain;
@@ -170,7 +170,7 @@ code {
   border-radius: 5%;
   box-shadow: 5px 5px 5px;
   height: 100%;
-  min-height: 330px;
+  /* min-height: 330px; */
 }
 #carouselClimbing {
   margin-left: 2em;
