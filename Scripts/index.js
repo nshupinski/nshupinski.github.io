@@ -1,9 +1,25 @@
-/* Check if on Blender slide 2 or 3 (portrait sizes) */
+
 window.onload = function () {
+
+    /* Check if on Climbing slide 2 or 3 (portrait sizes) */
+    $('#carouselClimbing').on('slide.bs.carousel', function onSlide (ev) {
+        var id = ev.relatedTarget.id;
+        if (id == "climbing3") {
+          document.getElementById("climbingImg3").style.width = "38%";
+        }
+        if (id == "climbing5") {
+            document.getElementById("climbingImg5").style.width = "43%";
+        }
+      })
+
+    /* Check if on Blender slide 2 or 3 (portrait sizes) */
   $('#carouselBlender').on('slide.bs.carousel', function onSlide (ev) {
     var id = ev.relatedTarget.id;
     if (id == "blender2") {
-      document.getElementById(id).style.width = "32%";
+      document.getElementById("blenderImg2").style.width = "33%";
+    }
+    if (id == "blender3") {
+        document.getElementById("blenderImg3").style.width = "57%";
     }
   })
 };
