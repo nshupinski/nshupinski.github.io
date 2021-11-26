@@ -111,8 +111,8 @@ code {
   padding-left: 40%;
   padding-right: 40%;
 }
-.carousel {
-  /* height: 330px; */
+#carouselRow {
+  padding-bottom: 2em;
 }
 .carousel-image {
   object-fit: contain;
@@ -293,6 +293,10 @@ code {
   #carouselRow .col {
     margin-right: auto;
     margin-left: auto;
+  }
+  .offset {
+    margin-left: auto;
+    margin-right: auto;
   }
 
   /* Resume */
