@@ -22,25 +22,35 @@ code {
 }
 
 /*Nav*/
+.social-media-icon {
+  width: 2.7em;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+#insta-nav {
+  width: 2.55em;
+}
 .blur {
   background: rgba(255, 255, 255, 0);
 }
-.nav-link {
-  color: #577a75 !important;
+.navbar-light .navbar-nav .nav-link {
+  color: rgba(255, 255, 255, 0.75);
   font-weight: bold;
 }
 #logo {
-  color: #577a75 !important;
+  /* color: #577a75 !important; */
+  color: rgba(255, 255, 255, 0.75);
   font-weight: bold;
 }
 
 /*Header*/
 #headerBackground {
   background-image: url("../Images/foggy_hills_background.jpg");
-  height: 500vh;
+  height: 100%;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
+  width: revert;
 }
 #headerBox {
   background: rgba(0, 0, 0, 0.85);
@@ -49,7 +59,8 @@ code {
 }
 #headerName {
   position: absolute;
-  color: #577a75;
+  /* color: #577a75; */
+  color: rgba(255, 255, 255, 0.75);
   font-size: 6vw;
   margin-left: 4.1em;
   top: 75%;
@@ -62,55 +73,20 @@ code {
   border-width: 2em;
   border-color: rgba(255, 255, 255, 0.7);
 }
-/* For Mobile */
-@media screen and (max-width: 767px) {
-  #headerName {
-    position: relative;
-    margin-left: 0;
-    top: 21vh;
-    font-size: 8vh;
-  }
-  .offset-5 {
-    margin-left: 0;
-  }
-  #headerPic {
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 14vh;
-  }
-  #resume {
-    width: 94vw;
-  }
-}
-
-/* For Tablets */
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-  #headerName {
-    display: inline-block;
-    margin-left: 0;
-    top: 21vh;
-    font-size: 8vh;
-  }
-  .offset-5 {
-    margin-left: 0;
-  }
-  #headerPic {
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 20vh;
-    width: 42vh;
-  }
-  #resume {
-    width: 94vw;
-  }
-}
 
 /*---------------------------------------------*/
 
 /*About Me*/
+#about-me-pic {
+  text-align: center;
+  margin-bottom: 2em;
+  padding: 0;
+  border-radius: 50%;
+  box-shadow: 5px 5px 5px;
+}
 #about-container {
   background-color: #577a75;
-  padding-top: 2em;
+  padding-top: 3em;
   padding-right: 0;
   padding-left: 0;
 }
@@ -122,6 +98,7 @@ code {
   border-color: rgba(197, 197, 197, 0.767);
   border-radius: 15px;
   margin-bottom: 2.5em;
+  box-shadow: 5px 5px 5px;
 }
 .accordion-item {
   border: none;
@@ -133,8 +110,7 @@ code {
 }
 .accordion-body .col {
   padding-top: 1em;
-  padding-bottom: 1em;
-  border-style: solid;
+  padding-bottom: 2em;
 }
 .accordion-button:not(.collapsed) {
   color: black;
@@ -143,14 +119,38 @@ code {
   padding-left: 40%;
   padding-right: 40%;
 }
+#carouselRow {
+  padding-bottom: 2em;
+}
 .carousel-image {
-  width: 100%;
-  height: 20em;
   object-fit: contain;
+  width: 100%;
+  height: inherit;
+}
+.carousel-item.active {
+  height: inherit;
+  text-align: center;
 }
 .carousel-header {
   text-align: center;
 }
+.carousel-inner {
+  border-radius: 5%;
+  box-shadow: 5px 5px 5px;
+  height: 100%;
+  /* min-height: 330px; */
+}
+#carouselClimbing {
+  margin-left: 2em;
+}
+#carouselBlender {
+  margin-left: 1em;
+  margin-right: 1em;
+}
+#carouselPets {
+  margin-right: 2em;
+}
+
 .hobby-icon {
   width: 2em;
   display: inline;
@@ -251,5 +251,125 @@ code {
   #resume {
     width: 60%;
     text-align: center;
+  }
+
+  /* Contact */
+  #contact {
+    margin-top: 4em;
+  }
+  #contact-form {
+    margin-top: 4em;
+  }
+}
+
+/* For Mobile */
+@media screen and (max-width: 767px) {
+  /* Header */
+  #headerBox {
+    margin-top: 50vh;
+    height: 25vh;
+  }
+  #headerName {
+    position: relative;
+    margin-left: -4vw;
+    top: -50vh;
+    font-size: 9vh;
+  }
+  .offset-5 {
+    margin-left: 0;
+  }
+  #headerPic {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20vh;
+    border-width: 1em;
+  }
+
+  /* About */
+  #carouselClimbing {
+    margin-left: 0;
+    margin-bottom: 2em;
+  }
+  #carouselBlender {
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 2em;
+  }
+  #carouselPets {
+    margin-right: 0;
+  }
+  #carouselRow .col {
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .offset {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Resume */
+  #resume {
+    width: 94vw;
+  }
+
+  /* Contact */
+  #contact-form {
+    width: 80% !important;
+  }
+}
+
+/* For Tablets */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  /* Header */
+  #headerBox {
+    margin-top: 50vh;
+    height: 25vh;
+  }
+  #headerName {
+    position: relative;
+    margin-left: -4vw;
+    top: -50vh;
+    font-size: 9vh;
+  }
+  .offset-5 {
+    margin-left: 0;
+  }
+  #headerPic {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20vh;
+    border-width: 1em;
+  }
+
+  /* About */
+  #carouselClimbing {
+    margin-left: 0;
+    margin-bottom: 2em;
+  }
+  #carouselBlender {
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 2em;
+  }
+  #carouselPets {
+    margin-right: 0;
+  }
+  #carouselRow .col {
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .offset {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Resume */
+  #resume {
+    width: 94vw;
+  }
+
+  /* Contact */
+  #contact-form {
+    width: 80% !important;
   }
 }
