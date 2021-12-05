@@ -74,3 +74,17 @@ function hideProj4Modal() {
     document.getElementById('page-mask').style.zIndex = "-10";
 }
 
+
+function catGif_Clicked() {
+    var catGif = document.getElementById("catGif");
+    catGif.src = "Images/Gifs/cat-runningCropped.gif"
+    catGif.style.paddingBottom = "2em";
+    catGif.style.width = "11%";
+    document.getElementById("gifClickMe").style.display = "none";
+    catTransition(catGif);
+}
+
+function catTransition(catGif) {
+    document.getElementById("catGif").style.transform = "translateX(900%)";
+}
+
