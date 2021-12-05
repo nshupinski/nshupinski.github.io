@@ -74,7 +74,7 @@ code {
   border-color: rgba(255, 255, 255, 0.7);
 }
 
-/*---------------------------------------------*/
+/*----------------*/
 
 /*About Me*/
 #about-me-pic {
@@ -156,7 +156,7 @@ code {
   display: inline;
 }
 
-/*---------------------------------------------*/
+/*----------------*/
 
 /*Projects*/
 .portfolio-item {
@@ -245,7 +245,7 @@ code {
     padding: 2em;
   }
 
-  /*---------------------------------------------*/
+  /*----------------*/
 
   /*Resume*/
   #resume {
@@ -261,6 +261,14 @@ code {
     margin-top: 4em;
   }
 }
+
+/* Gif */
+#catGif {
+  width: 6%;
+  transition: transform 3000ms linear;
+}
+
+/*---------------------------------------------*/
 
 /* For Mobile */
 @media screen and (max-width: 767px) {

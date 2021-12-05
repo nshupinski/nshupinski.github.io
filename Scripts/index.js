@@ -81,5 +81,10 @@ function catGif_Clicked() {
     catGif.style.paddingBottom = "2em";
     catGif.style.width = "11%";
     document.getElementById("gifClickMe").style.display = "none";
+    catTransition(catGif);
+}
+
+function catTransition(catGif) {
+    document.getElementById("catGif").style.transform = "translateX(900%)";
 }
 
