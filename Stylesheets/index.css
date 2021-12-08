@@ -265,7 +265,30 @@ code {
 /* Gif */
 #catGif {
   width: 6%;
-  transition: transform 3000ms linear;
+  transition: opacity 1000ms linear, transform 4000ms linear 500ms;
+}
+#catGif.fade {
+  opacity: 0;
+}
+#gifClickMe {
+  color: white;
+  margin-left: 1em;
+  padding-bottom: 1em;
+  font-size: 1vw;
+  font-family: cursive;
+}
+
+/* Pet Page */
+#petPageBackground {
+  position: fixed;
+  background-color: black;
+  z-index: 1070;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  margin-left: -100%;
+  transition: transform 3000ms linear 1000ms;
 }
 
 /*---------------------------------------------*/
@@ -324,10 +347,25 @@ code {
   #contact-form {
     width: 80% !important;
   }
+
+  /* Gif */
+  #catGif {
+    width: 25%;
+  }
+  #gifClickMe {
+    font-size: 4vw;
+  }
 }
 
 /* For Tablets */
 @media screen and (min-width: 768px) and (max-width: 1023px) {
+  /* Nav */
+  #navLinks {
+  }
+  #navLinks .nav-item {
+    margin-right: 2em;
+  }
+
   /* Header */
   #headerBox {
     margin-top: 50vh;

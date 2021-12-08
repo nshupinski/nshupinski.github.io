@@ -18,9 +18,6 @@ window.onload = function () {
     if (id == "blender2") {
       document.getElementById("blenderImg2").style.width = "33%";
     }
-    if (id == "blender3") {
-        document.getElementById("blenderImg3").style.width = "57%";
-    }
   })
 };
 
@@ -77,14 +74,45 @@ function hideProj4Modal() {
 
 function catGif_Clicked() {
     var catGif = document.getElementById("catGif");
-    catGif.src = "Images/Gifs/cat-runningCropped.gif"
-    catGif.style.paddingBottom = "2em";
-    catGif.style.width = "11%";
-    document.getElementById("gifClickMe").style.display = "none";
-    catTransition(catGif);
+    fadeOutCat();
+    $("#catGif").one("transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd", function(){  
+
+        catGif.style.transition = "transform 3000ms linear 500ms";
+        catGif.src = "Images/Gifs/cat-runningCropped.gif";
+        catGif.style.opacity = "1";
+        catGif.style.marginLeft = "-9%";
+        var translateXValue;
+        /* Mobile */
+        if(screen.width < 767) {
+            catGif.style.width = "35%";
+            translateXValue = 340;
+        }
+        /* Tablet */
+        else if (screen.width > 767 && screen.width < 1023) {
+
+        }
+        /* Desktop */
+        else {
+            catGif.style.width = "11%";
+            translateXValue = 1000;
+        }
+        catTransition(translateXValue);
+    });
 }
 
-function catTransition(catGif) {
-    document.getElementById("catGif").style.transform = "translateX(900%)";
+function catTransition(translateXValue) {
+    /* Move Cat and Pet Page */
+    document.getElementById("catGif").style.transform = "translateX(" + translateXValue + "%)";
+    document.getElementById("petPageBackground").style.transform = "translateX(100%)";
+    
+    $("#petPageBackground").one("transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd", function(){  
+        $("#catGif").style.display = "none";
+    });
+}
+
+function fadeOutCat() {
+    document.getElementById("catGif").classList.toggle("fade");
+    document.getElementById("gifClickMe").style.display = "none";
+    catGif.style.paddingBottom = "2em";
 }
 
