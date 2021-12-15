@@ -33,9 +33,9 @@
       
       <!--Nav-->
       <nav class="navbar navbar-expand-lg navbar-light p-3 blur fixed-top" id="nav">
-        <div class="container-fluid">
+        <div class="container-fluid" id="navContainer">
           <a class="navbar-brand" id="logo" href="#">Nicholas Shupinski |</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <button class="navbar-toggler" id="hamburger" onclick="btnHamburger_Clicked()" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNav">
@@ -54,7 +54,7 @@
               </li>
             </ul>
             <!---->
-            <ul class="nav navbar-nav ml-auto justify-content-end" style="margin-left: auto; flex-direction: row;">
+            <ul class="nav navbar-nav ml-auto justify-content-end" id="navSocials" style="margin-left: auto; flex-direction: row;">
               <li>
                 <a id="fb-nav" target="_blank" href="https://www.facebook.com/nick.shupinski"><img class="social-media-icon" src="Images/Icons/fb-icon.png"></img></a>
               </li>

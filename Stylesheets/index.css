@@ -295,6 +295,22 @@ code {
 
 /* For Mobile */
 @media screen and (max-width: 767px) {
+  /* Nav */
+  #navLinks {
+    margin-bottom: -2.3em;
+  }
+  #navLinks .nav-item {
+    margin-right: 2em;
+  }
+  #navSocials {
+    position: relative;
+  }
+  #navbarNav {
+  }
+  .navbar-collapse.collapse.show {
+    background-color: rgba(255, 255, 255, 1);
+  }
+
   /* Header */
   #headerBox {
     margin-top: 50vh;
@@ -360,10 +376,15 @@ code {
 /* For Tablets */
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   /* Nav */
-  #navLinks {
-  }
   #navLinks .nav-item {
     margin-right: 2em;
+  }
+  #navSocials {
+    position: relative;
+    top: -2.3em;
+  }
+  #navContainer {
+    margin-bottom: -2.3em;
   }
 
   /* Header */
