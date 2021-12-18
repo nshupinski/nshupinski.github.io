@@ -1,6 +1,11 @@
 
 window.onload = function () {
 
+    /* Check screen size for if line should come after name in nav */
+    if(screen.width < 1023) {
+        document.getElementById("logo").innerHTML = "Nicholas Shupinski";
+    }
+
     /* Check if on Climbing slide 2 or 3 (portrait sizes) */
     $('#carouselClimbing').on('slide.bs.carousel', function onSlide (ev) {
         var id = ev.relatedTarget.id;
@@ -75,7 +80,7 @@ function hideProj4Modal() {
 function catGif_Clicked() {
     var catGif = document.getElementById("catGif");
     fadeOutCat();
-    $("#catGif").one("transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd", function(){  
+    $("#catGif").bind("transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd", function(){  
 
         catGif.style.transition = "transform 3000ms linear 500ms";
         catGif.src = "Images/Gifs/cat-runningCropped.gif";
@@ -100,15 +105,27 @@ function catGif_Clicked() {
     });
 }
 
+function btnPetPageClose_Clicked() {
+    document.getElementById("btnPetReopen").style.display = "inline";
+    document.getElementById("petPageBackground").style.transform = "translateX(-100%)";
+}
+function btnPetPageReopen_Clicked() {
+    document.getElementById("petPageBackground").style.transform = "translateX(100%)";
+}
+
 function catTransition(translateXValue) {
+    /* Fire after pet page ends transition */
+    $("#petPageBackground").bind("transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd", function(){  
+        document.getElementById("catGif").style.display = "none";
+        document.getElementById("btnPetClose").style.opacity = "1";
+        document.getElementById("petPageBackground").style.transition = "transform 300ms linear 0ms;"
+    });
+
     /* Move Cat and Pet Page */
     document.getElementById("catGif").style.transform = "translateX(" + translateXValue + "%)";
     document.getElementById("petPageBackground").style.transform = "translateX(100%)";
-    
-    $("#petPageBackground").one("transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd", function(){  
-        $("#catGif").style.display = "none";
-    });
 }
+
 
 function fadeOutCat() {
     document.getElementById("catGif").classList.toggle("fade");
