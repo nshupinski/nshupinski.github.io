@@ -107,7 +107,7 @@ function catGif_Clicked() {
 
 function btnPetPageClose_Clicked() {
     document.getElementById("btnPetReopen").style.display = "inline";
-    document.getElementById("petPageBackground").style.transform = "translateX(-100%)";
+    document.getElementById("petPageBackground").style.transform = "translateX(0%)";
 }
 function btnPetPageReopen_Clicked() {
     document.getElementById("petPageBackground").style.transform = "translateX(100%)";
@@ -118,7 +118,7 @@ function catTransition(translateXValue) {
     $("#petPageBackground").bind("transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd", function(){  
         document.getElementById("catGif").style.display = "none";
         document.getElementById("btnPetClose").style.opacity = "1";
-        document.getElementById("petPageBackground").style.transition = "transform 300ms linear 0ms;"
+        document.getElementById("petPageBackground").style.transition = "transform 1000ms linear 0ms";
     });
 
     /* Move Cat and Pet Page */
