@@ -1,6 +1,11 @@
 
 window.onload = function () {
 
+    /* Check screen size for if line should come after name in nav */
+    if(screen.width < 1023) {
+        document.getElementById("logo").innerHTML = "Nicholas Shupinski";
+    }
+
     /* Check if on Climbing slide 2 or 3 (portrait sizes) */
     $('#carouselClimbing').on('slide.bs.carousel', function onSlide (ev) {
         var id = ev.relatedTarget.id;
@@ -17,9 +22,6 @@ window.onload = function () {
     var id = ev.relatedTarget.id;
     if (id == "blender2") {
       document.getElementById("blenderImg2").style.width = "33%";
-    }
-    if (id == "blender3") {
-        document.getElementById("blenderImg3").style.width = "57%";
     }
   })
 };
@@ -77,14 +79,57 @@ function hideProj4Modal() {
 
 function catGif_Clicked() {
     var catGif = document.getElementById("catGif");
-    catGif.src = "Images/Gifs/cat-runningCropped.gif"
-    catGif.style.paddingBottom = "2em";
-    catGif.style.width = "11%";
-    document.getElementById("gifClickMe").style.display = "none";
-    catTransition(catGif);
+    fadeOutCat();
+    $("#catGif").bind("transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd", function(){  
+
+        catGif.style.transition = "transform 3000ms linear 500ms";
+        catGif.src = "Images/Gifs/cat-runningCropped.gif";
+        catGif.style.opacity = "1";
+        catGif.style.marginLeft = "-9%";
+        var translateXValue;
+        /* Mobile */
+        if(screen.width < 767) {
+            catGif.style.width = "35%";
+            translateXValue = 340;
+        }
+        /* Tablet */
+        else if (screen.width > 767 && screen.width < 1023) {
+
+        }
+        /* Desktop */
+        else {
+            catGif.style.width = "11%";
+            translateXValue = 1000;
+        }
+        catTransition(translateXValue);
+    });
 }
 
-function catTransition(catGif) {
-    document.getElementById("catGif").style.transform = "translateX(900%)";
+function btnPetPageClose_Clicked() {
+    document.getElementById("btnPetReopen").style.display = "inline";
+    document.getElementById("petPageBackground").style.transform = "translateX(0%)";
+}
+function btnPetPageReopen_Clicked() {
+    document.getElementById("petPageBackground").style.transform = "translateX(100%)";
+}
+
+function catTransition(translateXValue) {
+    /* Fire after pet page ends transition */
+    $("#petPageBackground").bind("transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd", function(){  
+        document.getElementById("catGif").style.display = "none";
+        document.getElementById("btnPetClose").style.opacity = "1";
+        document.getElementById("petPageBackground").style.transition = "transform 1000ms linear 0ms";
+    });
+
+    /* Move Cat and Pet Page */
+    document.getElementById("catGif").style.transform = "translateX(" + translateXValue + "%)";
+    document.getElementById("petPageBackground").style.transform = "translateX(100%)";
+}
+
+
+function fadeOutCat() {
+    document.getElementById("catGif").classList.toggle("fade");
+    document.getElementById("gifClickMe").style.display = "none";
+    catGif.style.paddingBottom = "2em";
 }
 

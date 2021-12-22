@@ -33,13 +33,13 @@
       
       <!--Nav-->
       <nav class="navbar navbar-expand-lg navbar-light p-3 blur fixed-top" id="nav">
-        <div class="container-fluid">
+        <div class="container-fluid" id="navContainer">
           <a class="navbar-brand" id="logo" href="#">Nicholas Shupinski |</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <button class="navbar-toggler" id="hamburger" onclick="btnHamburger_Clicked()" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
+            <ul class="navbar-nav" id="navLinks">
               <li class="nav-item">
                 <a class="nav-link" id="about-me-nav" aria-current="page" href="#about-container">About Me</a>
               </li>
@@ -54,7 +54,7 @@
               </li>
             </ul>
             <!---->
-            <ul class="nav navbar-nav ml-auto" style="margin-left: auto;">
+            <ul class="nav navbar-nav ml-auto justify-content-end" id="navSocials" style="margin-left: auto; flex-direction: row;">
               <li>
                 <a id="fb-nav" target="_blank" href="https://www.facebook.com/nick.shupinski"><img class="social-media-icon" src="Images/Icons/fb-icon.png"></img></a>
               </li>
@@ -92,7 +92,7 @@
           <div class="row align-items-center">
             <div class="col">
               <div id="aboutMeParContainer">
-                <p>Hi I'm Nick! I live in Philadelphia and graduated from Temple University with a B.S. in Information Science and Technology. 
+                <p style="text-align: center;">Hi I'm Nick! I live in Philadelphia and graduated from Temple University with a B.S. in Information Science and Technology. 
                   I love my cats Bacon and Kiwi, and my fish Mark, Pebbles, and Commodore Gills more than anything in the world (Keep an eye out for them hidden on this site),
                   and I spend my free time rock climbing, 3D modeling using a software called Blender, playing PC games, and working on personal coding projects.
                 </p>
@@ -172,14 +172,14 @@
                           <button type="button" data-bs-target="#carouselBlender" data-bs-slide-to="5" aria-label="Slide 6"></button>
                         </div>
                         <div class="carousel-inner">
-                          <div class="carousel-item active" id="blender1" data-bs-interval="6000">
+                          <div class="carousel-item active" id="blender3" data-bs-interval="6000">
+                            <img class="carousel-image" src="Images/Blender/blender_donut.png" class="d-block w-75" id="blenderImg3" alt="Donut & Coffee">
+                          </div>
+                          <div class="carousel-item" id="blender1" data-bs-interval="6000">
                             <img class="carousel-image" src="Images/Blender/mom's house 1.png" class="d-block w-75" alt="Mom's house">
                           </div>
                           <div class="carousel-item" id="blender2" data-bs-interval="6000">
                             <img class="carousel-image" src="Images/Blender/Imperial-Pint-Beer.png" class="d-block w-75" id="blenderImg2" alt="Beer Glass" >
-                          </div>
-                          <div class="carousel-item" id="blender3" data-bs-interval="6000">
-                            <img class="carousel-image" src="Images/Blender/donut_cropped.png" class="d-block w-75" id="blenderImg3" alt="Donut & Coffee">
                           </div>
                           <div class="carousel-item" id="blender4" data-bs-interval="6000">
                             <img class="carousel-image" src="Images/Blender/chessRender2.png" class="d-block w-75" alt="Chess Board">
@@ -335,9 +335,31 @@
         </div>
       </section>
       <img id="catGif" src="Images/Gifs/cat-sitting.gif" onclick="catGif_Clicked()"> 
-      <p id="gifClickMe" style="color: white; margin-left: 1em; padding-bottom: 1em; font-size: 1vw;">Click Me!</p>
+      <p id="gifClickMe">Click Me!</p>
     </div>
   </div>
+
+  <!-- Pet Page -->
+  <section>
+    <div id="petPageBackground">
+      <button type="button" id="btnPetClose" onclick="btnPetPageClose_Clicked()">X</button>
+      <section id="petList">
+        <div class="row justify-content-center">
+          <!-- <div class="col-3">
+            <img class="carousel-image" src="Images/Climbing/IMG_4601.JPG" class="d-block w-75" alt="...">
+          </div>
+          <div class="col-3">
+            <img class="carousel-image" src="Images/Climbing/IMG_4601.JPG" class="d-block w-75" alt="...">
+          </div>
+          <div class="col-3">
+            <img class="carousel-image" src="Images/Climbing/IMG_4601.JPG" class="d-block w-75" alt="...">
+          </div> -->
+          <h2 style="text-align: center; color: white;">Coming Soon...</h2>
+        </div>
+      </section>
+      <button type="button" id="btnPetReopen" onclick="btnPetPageReopen_Clicked()"><img id="petReopenCatIcon" src="Images/Icons/cat.png"></button>
+    </div>
+  </section>
 
   <!--CST Dashboard Modal-->
   <div class="modal" id="proj1Modal" tabindex="-1">

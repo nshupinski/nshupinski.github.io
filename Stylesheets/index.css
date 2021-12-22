@@ -265,13 +265,85 @@ code {
 /* Gif */
 #catGif {
   width: 6%;
-  transition: transform 3000ms linear;
+  transition: opacity 1000ms linear, transform 4000ms linear 500ms;
+}
+#catGif.fade {
+  opacity: 0;
+}
+#gifClickMe {
+  color: white;
+  margin-left: 1em;
+  padding-bottom: 1em;
+  font-size: 1vw;
+  font-family: cursive;
+}
+
+/* Pet Page */
+#petPageBackground {
+  position: fixed;
+  background-color: #606c81;
+  z-index: 1070;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  margin-left: -100%;
+  transition: transform 3000ms linear 1000ms;
+}
+#petList {
+  margin-top: 5em;
+}
+
+#btnPetClose {
+  float: right;
+  color: red;
+  background-color: black;
+  font-size: xx-large;
+  opacity: 0;
+  transition: opacity 500ms linear 500ms;
+  border-style: inset;
+  border-radius: 5px 5px 5px;
+  margin-right: 0.5em;
+  margin-top: 0.5em;
+}
+#btnPetClose:hover {
+  border-style: none;
+}
+
+#btnPetReopen {
+  position: fixed;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 100%;
+  display: none;
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+  bottom: 5em;
+}
+#petReopenCatIcon {
+  width: 3em;
 }
 
 /*---------------------------------------------*/
 
 /* For Mobile */
 @media screen and (max-width: 767px) {
+  /* Nav */
+  #navLinks {
+    margin-bottom: -2.3em;
+  }
+  #navLinks .nav-item {
+    margin-right: 2em;
+  }
+  #navSocials {
+    position: relative;
+  }
+  #navbarNav {
+  }
+  .navbar-collapse.collapse.show {
+    /* background-color: rgba(255, 255, 255, 1); */
+  }
+
   /* Header */
   #headerBox {
     margin-top: 50vh;
@@ -324,10 +396,30 @@ code {
   #contact-form {
     width: 80% !important;
   }
+
+  /* Gif */
+  #catGif {
+    width: 25%;
+  }
+  #gifClickMe {
+    font-size: 4vw;
+  }
 }
 
 /* For Tablets */
 @media screen and (min-width: 768px) and (max-width: 1023px) {
+  /* Nav */
+  #navLinks .nav-item {
+    margin-right: 2em;
+  }
+  #navSocials {
+    position: relative;
+    top: -2.3em;
+  }
+  #navContainer {
+    margin-bottom: -2.3em;
+  }
+
   /* Header */
   #headerBox {
     margin-top: 50vh;
