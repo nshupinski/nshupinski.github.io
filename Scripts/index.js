@@ -2,7 +2,7 @@
 window.onload = function () {
 
     /* Check screen size for if line should come after name in nav */
-    if(screen.width < 1023) {
+    if(screen.width < 992) {
         document.getElementById("logo").innerHTML = "Nicholas Shupinski";
     }
 
@@ -88,12 +88,12 @@ function catGif_Clicked() {
         catGif.style.marginLeft = "-9%";
         var translateXValue;
         /* Mobile */
-        if(screen.width < 767) {
+        if(screen.width < 688) {
             catGif.style.width = "35%";
             translateXValue = 340;
         }
         /* Tablet */
-        else if (screen.width > 767 && screen.width < 1023) {
+        else if (screen.width > 688 && screen.width < 992) {
 
         }
         /* Desktop */
