@@ -338,10 +338,14 @@ code {
   #navSocials {
     position: relative;
   }
-  #navbarNav {
+  #nav.solid {
+    background-color: white;
   }
-  .navbar-collapse.collapse.show {
-    /* background-color: rgba(255, 255, 255, 1); */
+  #logo.transparent {
+    color: #577a75;
+  }
+  .navbar-light .navbar-nav .nav-link {
+    color: #577a75;
   }
 
   /* Header */
@@ -418,6 +422,15 @@ code {
   }
   #navContainer {
     margin-bottom: -2.3em;
+  }
+  #nav.solid {
+    background-color: white;
+  }
+  #logo.transparent {
+    color: #577a75;
+  }
+  .navbar-light .navbar-nav .nav-link {
+    color: #577a75;
   }
 
   /* Header */

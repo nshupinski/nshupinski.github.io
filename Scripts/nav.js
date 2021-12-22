@@ -1,3 +1,12 @@
+window.onload = function () {
+    
+  /* Click event for hamburger */
+  document.getElementById("hamburger").addEventListener("click", function() {
+      document.getElementById("nav").classList.toggle("solid");
+      document.getElementById("logo").classList.toggle("transparent");
+    });
+  }
+
 /* Add Event Listener to check if at top of page */
 window.addEventListener("scroll",function(){
 
@@ -55,10 +64,6 @@ window.addEventListener("scroll",function(){
         nav.style.background = "rgba(255, 255, 255, 1)";
       }
 });
-
- $("hamburger").on("click", function() {
-    alert("did i do it");
-  })
 
 
 function navScrollDown() {
