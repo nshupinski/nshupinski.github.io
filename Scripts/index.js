@@ -88,12 +88,12 @@ function catGif_Clicked() {
         catGif.style.marginLeft = "-9%";
         var translateXValue;
         /* Mobile */
-        if(screen.width < 688) {
+        if(screen.width < 576) {
             catGif.style.width = "35%";
             translateXValue = 340;
         }
         /* Tablet */
-        else if (screen.width > 688 && screen.width < 992) {
+        else if (screen.width > 576 && screen.width < 992) {
 
         }
         /* Desktop */
