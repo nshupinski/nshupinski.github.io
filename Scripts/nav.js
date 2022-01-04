@@ -55,29 +55,6 @@ window.addEventListener("scroll",function(){
         nav.style.background = "rgba(255, 255, 255, 1)";
       }
 });
-/* Smaller Screens - Make Nav White When Hamburger Clicked */
-// function btnHamburger_Clicked() {
-//   var perc = getScrollPercent();
-
-//   // if(perc < 9) {
-//   //   alert(document.getElementById("navbarNav").className = "navbar-collapse collapse show");
-//   // }
-//   if(document.getElementById("navbarNav").className = "navbar-collapse collapse show") {
-//     // document.getElementById("nav").style.backgroundColor = "rgba(255, 255, 255, 0)";
-//   }
-  
-//   // if(document.getElementById("navbarNav").classList.contains("show")) {
-//   //   alert(document.getElementById("navbarNav").classList.contains("show"));
-//   //   document.getElementById("nav").style.backgroundColor = "rgba(255, 255, 255, 1)";
-//   // }
-//   // else {
-//   //   document.getElementById("nav").style.backgroundColor = "rgba(255, 255, 255, 0)";
-//   // }
- 
-// }
- $("hamburger").on("click", function() {
-    alert("did i do it");
-  })
 
 
 function navScrollDown() {
