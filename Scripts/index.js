@@ -78,6 +78,7 @@ function hideProj4Modal() {
 
 
 function catGif_Clicked() {
+    loadPets();
     var catGif = document.getElementById("catGif");
     fadeOutCat();
     $("#catGif").bind("transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd", function(){  

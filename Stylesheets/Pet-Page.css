@@ -44,9 +44,18 @@
   width: 3em;
 }
 
+.petNav {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 3em;
+}
 .petNav a {
-  color: white !important;
+  color: #2e394d !important;
 }
 .petNav .col-3 {
   text-align: center;
+}
+.petNav .dropdown-item {
+  color: #2e394d;
 }
