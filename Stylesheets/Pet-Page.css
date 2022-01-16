@@ -59,3 +59,21 @@
 .petNav .dropdown-item {
   color: #2e394d;
 }
+
+/* For Mobile */
+@media screen and (max-width: 688px) {
+  /* Pet Page */
+  #petPageBackground {
+    transition: transform 2000ms linear 1500ms;
+  }
+
+  #btnPetClose {
+    margin-top: 1em;
+    margin-right: 1em;
+  }
+
+  .dropdown {
+    margin-bottom: 1em;
+    margin-right: 1em;
+  }
+}

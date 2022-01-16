@@ -91,7 +91,7 @@ function catGif_Clicked() {
             catGif.style.width = "35%";
             translateXValue = 380;
             catGif.style.marginLeft = "-30%";
-            catGif.style.transition = "transform 2700ms linear 500ms";
+            catGif.style.transition = "transform 2500ms linear 500ms";
         }
         /* Tablet */
         else if (screen.width > 576 && screen.width < 992) {
