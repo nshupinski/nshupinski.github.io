@@ -22,6 +22,8 @@
     <script src="Scripts/email.js"></script>
     <!-- Nav JS -->
     <script src="Scripts/nav.js"></script>
+    <!-- Pet Page JS -->
+    <script src="Scripts/Pet-Page.js" defer></script>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -207,7 +209,7 @@
                     <div class="col-10 col-sm-4 col-md-10 col-lg-4 offset">
                       <div style="text-align: center; margin-bottom: 10px;">
                         <h4 class="carousel-header" style="display: inline;"><u>Pets</u></h4>
-                        <img src="Images/Pets/cat-icon.png" class="hobby-icon" style="padding-bottom: 0px; width: 1.3em;">
+                        <img src="Images/Icons/cat-icon.png" class="hobby-icon" style="padding-bottom: 0px; width: 1.3em;">
                       </div>
                       <div id="carouselPets" class="carousel slide" data-bs-interval="false" data-bs-ride="carousel">
                         <div class="carousel-indicators">
@@ -220,31 +222,31 @@
                         <div class="carousel-inner">
                           <div class="carousel-item active" data-bs-interval="6000">
                             <img class="carousel-image" src="Images/Pets/Bacon-Main.jpg" class="d-block w-75" alt="...">
-                            <div class="carousel-caption d-none d-md-block">
+                            <div class="carousel-caption">
                               <h5>Bacon</h5>
                             </div>
                           </div>
                           <div class="carousel-item" data-bs-interval="6000">
                             <img class="carousel-image" src="Images/Pets/Kiwi-Main.jpg" class="d-block w-75" alt="...">
-                            <div class="carousel-caption d-none d-md-block">
+                            <div class="carousel-caption">
                               <h5>Kiwi</h5>
                             </div>
                           </div>
                           <div class="carousel-item" data-bs-interval="6000">
                             <img class="carousel-image" src="Images/Pets/Commodore-Main.jpg" class="d-block w-75" alt="...">
-                            <div class="carousel-caption d-none d-md-block">
+                            <div class="carousel-caption">
                               <h5>Commodore Gills</h5>
                             </div>
                           </div>
                           <div class="carousel-item" data-bs-interval="6000">
                             <img class="carousel-image" src="Images/Pets/Pebbles-Main.jpg" class="d-block w-75" alt="...">
-                            <div class="carousel-caption d-none d-md-block">
+                            <div class="carousel-caption">
                               <h5>Pebbles</h5>
                             </div>
                           </div>
                           <div class="carousel-item" data-bs-interval="6000">
                             <img class="carousel-image" src="Images/Pets/Mark-Main.jpg" class="d-block w-75" alt="...">
-                            <div class="carousel-caption d-none d-md-block">
+                            <div class="carousel-caption">
                               <h5>Mark</h5>
                             </div>
                           </div>
@@ -370,32 +372,72 @@
       <button type="button" id="btnPetClose" onclick="btnPetPageClose_Clicked()">X</button>
       <section id="petList">
 
-        <!-- <div class="row justify-content-center petNav">
-          <div class="col-3">
-            <a>My Pets</a>
+        <div class="row petNav justify-content-center">
+          <div class="col-6 col-sm-2">
+            <div class="dropdown">
+              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                My Petszzz
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li><a class="dropdown-item" href="#">Bacon</a></li>
+                <li><a class="dropdown-item" href="#">Kiwi</a></li>
+                <li><a class="dropdown-item" href="#">Commodore Gills</a></li>
+                <li><a class="dropdown-item" href="#">Mark</a></li>
+                <li><a class="dropdown-item" href="#">Pebbles</a></li>
+              </ul>
+            </div>
           </div>
-          <div class="col-3">
-            <a>Parents'</a>
+          <div class="col-6 col-sm-2">
+            <div class="dropdown">
+              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                Parents'
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li><a class="dropdown-item" href="#">Cooper</a></li>
+                <li><a class="dropdown-item" href="#">Fergus</a></li>
+                <li><a class="dropdown-item" href="#">Sydney</a></li>
+              </ul>
+            </div>
           </div>
-          <div class="col-3">
-            <a>Grandparents'</a>
+          <div class="col-6 col-sm-2">
+            <div class="dropdown">
+              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                Grandparents'
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li><a class="dropdown-item" href="#">Uncle Pete</a></li>
+              </ul>
+            </div>
           </div>
-          <div class="col-3">
-            <a>Sister's</a>
+          <div class="col-6 col-sm-2">
+            <div class="dropdown">
+              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                Sister's
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li><a class="dropdown-item" href="#">Pea</a></li>
+                <li><a class="dropdown-item" href="#">Opie</a></li>
+                <li><a class="dropdown-item" href="#">Ivan</a></li>
+                <li><a class="dropdown-item" href="#">Pickles</a></li>
+              </ul>
+            </div>
           </div>
-        </div> -->
+          <div class="col-6 col-sm-2">
+            <div class="dropdown">
+              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                Brother's
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li><a class="dropdown-item" href="#">Kevin Costner In Waterworld</a></li>
+                <li><a class="dropdown-item" href="#">Randy</a></li>
+                <li><a class="dropdown-item" href="#">Timmy Cream Corn</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
 
-        <div class="row justify-content-center">
-          <!-- <div class="col-3">
-            <img class="carousel-image" src="Images/Climbing/IMG_4601.JPG" class="d-block w-75" alt="...">
-          </div>
-          <div class="col-3">
-            <img class="carousel-image" src="Images/Climbing/IMG_4601.JPG" class="d-block w-75" alt="...">
-          </div>
-          <div class="col-3">
-            <img class="carousel-image" src="Images/Climbing/IMG_4601.JPG" class="d-block w-75" alt="...">
-          </div> -->
-          <h2 style="text-align: center; color: white;">Coming Soon...</h2>
+        <div class="row justify-content-center" style="width: 95%; margin-left: auto; margin-right: auto;" id="petGalleryRow">
+
         </div>
       </section>
       <button type="button" id="btnPetReopen" onclick="btnPetPageReopen_Clicked()"><img id="petReopenCatIcon" src="Images/Icons/cat.png"></button>

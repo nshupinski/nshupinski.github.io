@@ -78,28 +78,30 @@ function hideProj4Modal() {
 
 
 function catGif_Clicked() {
+    loadPets();
     var catGif = document.getElementById("catGif");
     fadeOutCat();
     $("#catGif").bind("transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd", function(){  
-
         catGif.style.transition = "transform 3000ms linear 500ms";
         catGif.src = "Images/Gifs/cat-runningCropped.gif";
         catGif.style.opacity = "1";
-        catGif.style.marginLeft = "-9%";
         var translateXValue;
         /* Mobile */
         if(screen.width < 576) {
             catGif.style.width = "35%";
-            translateXValue = 340;
+            translateXValue = 380;
+            catGif.style.marginLeft = "-30%";
+            catGif.style.transition = "transform 2500ms linear 500ms";
         }
         /* Tablet */
         else if (screen.width > 576 && screen.width < 992) {
-
+            catGif.style.marginLeft = "-9%";
         }
         /* Desktop */
         else {
             catGif.style.width = "11%";
             translateXValue = 1000;
+            catGif.style.marginLeft = "-9%";
         }
         catTransition(translateXValue);
     });

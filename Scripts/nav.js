@@ -1,3 +1,13 @@
+
+window.onload = function () {
+    
+  /* Click event for hamburger */
+  document.getElementById("hamburger").addEventListener("click", function() {
+      document.getElementById("nav").classList.toggle("solid");
+      document.getElementById("logo").classList.toggle("transparent");
+    });
+  }
+
 /* Add Event Listener to check if at top of page */
 window.addEventListener("scroll",function(){
 
