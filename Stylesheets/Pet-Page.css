@@ -60,6 +60,9 @@
   color: #2e394d;
 }
 
+.petImg {
+}
+
 /* For Mobile */
 @media screen and (max-width: 688px) {
   /* Pet Page */
@@ -68,7 +71,7 @@
   }
 
   #btnPetClose {
-    margin-top: 1em;
+    margin-top: 0.5em;
     margin-right: 1em;
   }
 

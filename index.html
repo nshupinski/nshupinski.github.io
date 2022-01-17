@@ -373,12 +373,13 @@
       <section id="petList">
 
         <div class="row petNav justify-content-center">
-          <div class="col-6 col-sm-2">
+          <div class="col-6 col-sm-3">
             <div class="dropdown">
               <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                My Petszzz
+                My Pets
               </button>
               <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li><a class="dropdown-item" href="#" onclick="petFilter_Clicked('My Pets')">All</a></li>
                 <li><a class="dropdown-item" href="#">Bacon</a></li>
                 <li><a class="dropdown-item" href="#">Kiwi</a></li>
                 <li><a class="dropdown-item" href="#">Commodore Gills</a></li>
@@ -387,34 +388,36 @@
               </ul>
             </div>
           </div>
-          <div class="col-6 col-sm-2">
+          <div class="col-6 col-sm-3">
             <div class="dropdown">
               <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                 Parents'
               </button>
               <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li><a class="dropdown-item" href="#" onclick="petFilter_Clicked('Parents')">All</a></li>
                 <li><a class="dropdown-item" href="#">Cooper</a></li>
                 <li><a class="dropdown-item" href="#">Fergus</a></li>
                 <li><a class="dropdown-item" href="#">Sydney</a></li>
               </ul>
             </div>
           </div>
-          <div class="col-6 col-sm-2">
+          <div class="col-6 col-sm-3">
             <div class="dropdown">
               <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                 Grandparents'
               </button>
               <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                <li><a class="dropdown-item" href="#">Uncle Pete</a></li>
+                <li><a class="dropdown-item" href="#" onclick="petFilter_Clicked('Pete')">Uncle Pete</a></li>
               </ul>
             </div>
           </div>
-          <div class="col-6 col-sm-2">
+          <div class="col-6 col-sm-3">
             <div class="dropdown">
               <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                 Sister's
               </button>
               <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li><a class="dropdown-item" href="#" onclick="petFilter_Clicked('Sister')">All</a></li>
                 <li><a class="dropdown-item" href="#">Pea</a></li>
                 <li><a class="dropdown-item" href="#">Opie</a></li>
                 <li><a class="dropdown-item" href="#">Ivan</a></li>
@@ -422,12 +425,13 @@
               </ul>
             </div>
           </div>
-          <div class="col-6 col-sm-2">
+          <div class="col-6 col-sm-3">
             <div class="dropdown">
               <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                 Brother's
               </button>
               <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li><a class="dropdown-item" href="#" onclick="petFilter_Clicked('Brother')">All</a></li>
                 <li><a class="dropdown-item" href="#">Kevin Costner In Waterworld</a></li>
                 <li><a class="dropdown-item" href="#">Randy</a></li>
                 <li><a class="dropdown-item" href="#">Timmy Cream Corn</a></li>
@@ -439,6 +443,7 @@
         <div class="row justify-content-center" style="width: 95%; margin-left: auto; margin-right: auto;" id="petGalleryRow">
 
         </div>
+
       </section>
       <button type="button" id="btnPetReopen" onclick="btnPetPageReopen_Clicked()"><img id="petReopenCatIcon" src="Images/Icons/cat.png"></button>
     </div>

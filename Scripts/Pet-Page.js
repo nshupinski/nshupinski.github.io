@@ -3,19 +3,19 @@ var petImageArray = [];
 addAllImages();
 
 function loadPets() {
-  addNewImage();
+  addImages();
 }
 
 function addAllImages() {
-  petImageArray.push("Images/Pets/Commodore-Main.jpg");
-  petImageArray.push("Images/Pets/Bacon-Main.jpg");
-  petImageArray.push("Images/Pets/Pebbles-Main.jpg");
-  petImageArray.push("Images/Pets/Mark-Main.jpg");
-  petImageArray.push("Images/Pets/Kiwi-Main.jpg");
+  petImageArray.push("Images/Pets/My Pets/Commodore-Main.jpg");
+  petImageArray.push("Images/Pets/My Pets/Bacon-Main.jpg");
+  petImageArray.push("Images/Pets/My Pets/Pebbles-Main.jpg");
+  petImageArray.push("Images/Pets/My Pets/Mark-Main.jpg");
+  petImageArray.push("Images/Pets/My Pets/Kiwi-Main.jpg");
+  petImageArray.push("Images/Pets/Grandparents/Pete1.jpg");
 }
 
-function addNewImage() {
-
+function addImages() {
 
 var initialArrayLength = petImageArray.length;
 
@@ -26,7 +26,7 @@ for (var i=0; i<initialArrayLength; i++) {
     newCol.style.marginBottom = "1em";
   
     var newImg = document.createElement("img");   // And a new image element
-    newImg.classList.add("carousel-image");
+    newImg.className = "carousel-image petImg";
     newImg.src = petImageArray[petImageArray.length - 1];
   
     newCol.appendChild(newImg);
@@ -36,5 +36,21 @@ for (var i=0; i<initialArrayLength; i++) {
   }
 }
 
+function petFilter_Clicked(keyword) {
+  // Reset array
+  petImageArray = [];
+  addAllImages();
 
+  // Clear pics
+  document.getElementById("petGalleryRow").innerHTML = "";
+
+  var length = petImageArray.length;
+
+  for (var i=0; i<length; i++) {
+    if(!(petImageArray[0].includes(keyword))) {
+      petImageArray.splice(petImageArray[0], 1);
+    }
+  } 
+  addImages();
+}
 
