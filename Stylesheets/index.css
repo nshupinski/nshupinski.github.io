@@ -21,6 +21,19 @@ code {
   z-index: -10;
 }
 
+.divider {
+  width: 30%;
+  height: 50%;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.homepage-header {
+  width: auto;
+}
+.header-row {
+  margin-bottom: 3em;
+}
+
 /*Nav*/
 .social-media-icon {
   width: 2.7em;
@@ -302,6 +315,11 @@ code {
     color: #577a75;
   }
 
+  .divider {
+    width: 20%;
+    height: 100%;
+  }
+
   /* Header */
   #headerBox {
     margin-top: 50vh;
@@ -351,6 +369,9 @@ code {
   /* Projects */
   .caption p {
     font-size: 0.9rem;
+  }
+  .portfolio-item .caption .caption-content p {
+    font-size: 1rem;
   }
 
   /* Resume */
