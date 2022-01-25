@@ -379,35 +379,41 @@
       <section id="petList">
 
         <div class="row petNav justify-content-center">
-          <div class="col-6 col-sm-3">
+          <div class="col-6 justify-content-center" style="text-align: center;">
+            <button type="button" class="btn btn-light" onclick="petFilter_Clicked('')">View All</button>
+          </div>
+        </div>
+
+        <div class="row petNav justify-content-center">
+          <div class="col-6 col-sm-2">
             <div class="dropdown">
               <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                 My Pets
               </button>
               <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                <li><a class="dropdown-item" href="#" onclick="petFilter_Clicked('My Pets')">All</a></li>
-                <li><a class="dropdown-item" href="#">Bacon</a></li>
-                <li><a class="dropdown-item" href="#">Kiwi</a></li>
-                <li><a class="dropdown-item" href="#">Commodore Gills</a></li>
-                <li><a class="dropdown-item" href="#">Mark</a></li>
-                <li><a class="dropdown-item" href="#">Pebbles</a></li>
+                <li><a class="dropdown-item" href="#" onclick="petFilter_Clicked('My Pets')"><b>All</b></a></li>
+                <li><a class="dropdown-item" href="#" onclick="petFilter_Clicked('Bacon')">Bacon</a></li>
+                <li><a class="dropdown-item" href="#" onclick="petFilter_Clicked('Kiwi')">Kiwi</a></li>
+                <li><a class="dropdown-item" href="#" onclick="petFilter_Clicked('Commodore')">Commodore Gills</a></li>
+                <li><a class="dropdown-item" href="#" onclick="petFilter_Clicked('Mark')">Mark</a></li>
+                <li><a class="dropdown-item" href="#" onclick="petFilter_Clicked('Pebbles')">Pebbles</a></li>
               </ul>
             </div>
           </div>
-          <div class="col-6 col-sm-3">
+          <div class="col-6 col-sm-2">
             <div class="dropdown">
               <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                 Parents'
               </button>
               <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                <li><a class="dropdown-item" href="#" onclick="petFilter_Clicked('Parents')">All</a></li>
-                <li><a class="dropdown-item" href="#">Cooper</a></li>
-                <li><a class="dropdown-item" href="#">Fergus</a></li>
-                <li><a class="dropdown-item" href="#">Sydney</a></li>
+                <li><a class="dropdown-item" href="#" onclick="petFilter_Clicked('Parents')"><b>All</b></a></li>
+                <li><a class="dropdown-item" href="#" onclick="petFilter_Clicked('stink')">Cooper</a></li>
+                <li><a class="dropdown-item" href="#" onclick="petFilter_Clicked('fergus')">Fergus</a></li>
+                <li><a class="dropdown-item" href="#" onclick="petFilter_Clicked('sydney')">Sydney</a></li>
               </ul>
             </div>
           </div>
-          <div class="col-6 col-sm-3">
+          <div class="col-6 col-sm-2">
             <div class="dropdown">
               <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                 Grandparents'
@@ -417,30 +423,30 @@
               </ul>
             </div>
           </div>
-          <div class="col-6 col-sm-3">
+          <div class="col-6 col-sm-2">
             <div class="dropdown">
               <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                 Sister's
               </button>
               <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                <li><a class="dropdown-item" href="#" onclick="petFilter_Clicked('Sister')">All</a></li>
-                <li><a class="dropdown-item" href="#">Pea</a></li>
-                <li><a class="dropdown-item" href="#">Opie</a></li>
-                <li><a class="dropdown-item" href="#">Ivan</a></li>
-                <li><a class="dropdown-item" href="#">Pickles</a></li>
+                <li><a class="dropdown-item" href="#" onclick="petFilter_Clicked('Sister')"><b>All</b></a></li>
+                <li><a class="dropdown-item" href="#" onclick="petFilter_Clicked('Pea')">Pea</a></li>
+                <li><a class="dropdown-item" href="#" onclick="petFilter_Clicked('Opie')">Opie</a></li>
+                <li><a class="dropdown-item" href="#" onclick="petFilter_Clicked('Ivan')">Ivan</a></li>
+                <li><a class="dropdown-item" href="#" onclick="petFilter_Clicked('Pickles')">Pickles</a></li>
               </ul>
             </div>
           </div>
-          <div class="col-6 col-sm-3">
+          <div class="col-6 col-sm-2">
             <div class="dropdown">
               <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                 Brother's
               </button>
               <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                <li><a class="dropdown-item" href="#" onclick="petFilter_Clicked('Brother')">All</a></li>
-                <li><a class="dropdown-item" href="#">Kevin Costner In Waterworld</a></li>
-                <li><a class="dropdown-item" href="#">Randy</a></li>
-                <li><a class="dropdown-item" href="#">Timmy Cream Corn</a></li>
+                <li><a class="dropdown-item" href="#" onclick="petFilter_Clicked('Brother')"><b>All</b></a></li>
+                <li><a class="dropdown-item" href="#" onclick="petFilter_Clicked('Kevin')">Kevin Costner In Waterworld</a></li>
+                <li><a class="dropdown-item" href="#" onclick="petFilter_Clicked('Randy')">Randy</a></li>
+                <li><a class="dropdown-item" href="#" onclick="petFilter_Clicked('Timmy')">Timmy Cream Corn</a></li>
               </ul>
             </div>
           </div>
