@@ -90,7 +90,7 @@
       <div class="container-fluid justify-content-center" id="about-container">
         <div class="container">
           <div class="row align-items-center justify-content-center">
-            <h3 style="text-align: center; margin-bottom: 1.5em;">About Me</h3>
+            <h3 style="text-align: center; margin-bottom: 1.5em;"><b>~About Me~</b></h3>
             <img src="Images/About-Me-Pic-Full.JPG" id="about-me-pic" class="col-sm-2 col-5" alt="Nick Shupinski Profile Picture"/>
           </div>
           <div class="row align-items-center">
@@ -221,31 +221,31 @@
                         </div>
                         <div class="carousel-inner">
                           <div class="carousel-item active" data-bs-interval="6000">
-                            <img class="carousel-image" src="Images/Pets/Bacon-Main.jpg" class="d-block w-75" alt="...">
+                            <img class="carousel-image" src="Images/Pets/My Pets/Bacon-Main.jpg" class="d-block w-75" alt="...">
                             <div class="carousel-caption">
                               <h5>Bacon</h5>
                             </div>
                           </div>
                           <div class="carousel-item" data-bs-interval="6000">
-                            <img class="carousel-image" src="Images/Pets/Kiwi-Main.jpg" class="d-block w-75" alt="...">
+                            <img class="carousel-image" src="Images/Pets/My Pets/Kiwi-Main.jpg" class="d-block w-75" alt="...">
                             <div class="carousel-caption">
                               <h5>Kiwi</h5>
                             </div>
                           </div>
                           <div class="carousel-item" data-bs-interval="6000">
-                            <img class="carousel-image" src="Images/Pets/Commodore-Main.jpg" class="d-block w-75" alt="...">
+                            <img class="carousel-image" src="Images/Pets/My Pets/Commodore-Main.jpg" class="d-block w-75" alt="...">
                             <div class="carousel-caption">
                               <h5>Commodore Gills</h5>
                             </div>
                           </div>
                           <div class="carousel-item" data-bs-interval="6000">
-                            <img class="carousel-image" src="Images/Pets/Pebbles-Main.jpg" class="d-block w-75" alt="...">
+                            <img class="carousel-image" src="Images/Pets/My Pets/Pebbles-Main.jpg" class="d-block w-75" alt="...">
                             <div class="carousel-caption">
                               <h5>Pebbles</h5>
                             </div>
                           </div>
                           <div class="carousel-item" data-bs-interval="6000">
-                            <img class="carousel-image" src="Images/Pets/Mark-Main.jpg" class="d-block w-75" alt="...">
+                            <img class="carousel-image" src="Images/Pets/My Pets/Mark-Main.jpg" class="d-block w-75" alt="...">
                             <div class="carousel-caption">
                               <h5>Mark</h5>
                             </div>
@@ -271,8 +271,10 @@
       <!--Projects-->
       <section class="content-section" style="margin-top: 4em;" id="portfolio">
         <div class="container px-4 px-lg-5">
-            <div class="content-section-heading text-center">
-                <h2 class="mb-5">Recent Projects</h2>
+            <div class="row justify-content-center content-section-heading text-center header-row">
+              <img src="Images/Icons/divider-Left.png" class="divider" style="float: left;">
+              <h2 class="homepage-header">Recent Projects</h2>
+              <img src="Images/Icons/divider-Right.png" class="divider" style="float: right;">
             </div>
             <div class="row gx-3">
                 <div class="col-lg-6">
@@ -326,8 +328,10 @@
       <!--Resume-->
       <section class="content-section" style="margin-top: 4em;" id="resumeSec">
         <div class="container px-4 px-lg-5">
-            <div class="content-section-heading text-center">
-                <h2 class="mb-5">Resume</h2>
+            <div class="row justify-content-center content-section-heading text-center header-row">
+              <img src="Images/Icons/divider-Left.png" class="divider" style="float: left;">
+                <h2 class="homepage-header">Resume</h2>
+                <img src="Images/Icons/divider-Right.png" class="divider" style="float: right;">
             </div>
         </div>
         <div style="text-align: center;">
@@ -338,8 +342,10 @@
       <!--Contact-->
       <section style="padding-bottom: 3em; margin-top: 4em;">
         <div class="container px-4 px-lg-5" id="contact">
-            <div class="content-section-heading text-center">
-                <h2 class="mb-5">Contact Me</h2>
+            <div class="row justify-content-center content-section-heading text-center header-row">
+              <img src="Images/Icons/divider-Left.png" class="divider" style="float: left;">
+                <h2 class="homepage-header">Contact Me</h2>
+                <img src="Images/Icons/divider-Right.png" class="divider" style="float: right;">
             </div>
         </div>
         <div id="contact-form">
@@ -373,17 +379,24 @@
       <section id="petList">
 
         <div class="row petNav justify-content-center">
+          <div class="col-6 justify-content-center" style="text-align: center;">
+            <button type="button" class="btn btn-light" onclick="petFilter_Clicked('')">View All</button>
+          </div>
+        </div>
+
+        <div class="row petNav justify-content-center">
           <div class="col-6 col-sm-2">
             <div class="dropdown">
               <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                My Petszzz
+                My Pets
               </button>
               <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                <li><a class="dropdown-item" href="#">Bacon</a></li>
-                <li><a class="dropdown-item" href="#">Kiwi</a></li>
-                <li><a class="dropdown-item" href="#">Commodore Gills</a></li>
-                <li><a class="dropdown-item" href="#">Mark</a></li>
-                <li><a class="dropdown-item" href="#">Pebbles</a></li>
+                <li><a class="dropdown-item" href="#" onclick="petFilter_Clicked('My Pets')"><b>All</b></a></li>
+                <li><a class="dropdown-item" href="#" onclick="petFilter_Clicked('Bacon')">Bacon</a></li>
+                <li><a class="dropdown-item" href="#" onclick="petFilter_Clicked('Kiwi')">Kiwi</a></li>
+                <li><a class="dropdown-item" href="#" onclick="petFilter_Clicked('Commodore')">Commodore Gills</a></li>
+                <li><a class="dropdown-item" href="#" onclick="petFilter_Clicked('Mark')">Mark</a></li>
+                <li><a class="dropdown-item" href="#" onclick="petFilter_Clicked('Pebbles')">Pebbles</a></li>
               </ul>
             </div>
           </div>
@@ -393,9 +406,10 @@
                 Parents'
               </button>
               <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                <li><a class="dropdown-item" href="#">Cooper</a></li>
-                <li><a class="dropdown-item" href="#">Fergus</a></li>
-                <li><a class="dropdown-item" href="#">Sydney</a></li>
+                <li><a class="dropdown-item" href="#" onclick="petFilter_Clicked('Parents')"><b>All</b></a></li>
+                <li><a class="dropdown-item" href="#" onclick="petFilter_Clicked('stink')">Cooper</a></li>
+                <li><a class="dropdown-item" href="#" onclick="petFilter_Clicked('fergus')">Fergus</a></li>
+                <li><a class="dropdown-item" href="#" onclick="petFilter_Clicked('sydney')">Sydney</a></li>
               </ul>
             </div>
           </div>
@@ -405,7 +419,7 @@
                 Grandparents'
               </button>
               <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                <li><a class="dropdown-item" href="#">Uncle Pete</a></li>
+                <li><a class="dropdown-item" href="#" onclick="petFilter_Clicked('Pete')">Uncle Pete</a></li>
               </ul>
             </div>
           </div>
@@ -415,10 +429,11 @@
                 Sister's
               </button>
               <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                <li><a class="dropdown-item" href="#">Pea</a></li>
-                <li><a class="dropdown-item" href="#">Opie</a></li>
-                <li><a class="dropdown-item" href="#">Ivan</a></li>
-                <li><a class="dropdown-item" href="#">Pickles</a></li>
+                <li><a class="dropdown-item" href="#" onclick="petFilter_Clicked('Sister')"><b>All</b></a></li>
+                <li><a class="dropdown-item" href="#" onclick="petFilter_Clicked('Pea')">Pea</a></li>
+                <li><a class="dropdown-item" href="#" onclick="petFilter_Clicked('Opie')">Opie</a></li>
+                <li><a class="dropdown-item" href="#" onclick="petFilter_Clicked('Ivan')">Ivan</a></li>
+                <li><a class="dropdown-item" href="#" onclick="petFilter_Clicked('Pickles')">Pickles</a></li>
               </ul>
             </div>
           </div>
@@ -428,9 +443,10 @@
                 Brother's
               </button>
               <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                <li><a class="dropdown-item" href="#">Kevin Costner In Waterworld</a></li>
-                <li><a class="dropdown-item" href="#">Randy</a></li>
-                <li><a class="dropdown-item" href="#">Timmy Cream Corn</a></li>
+                <li><a class="dropdown-item" href="#" onclick="petFilter_Clicked('Brother')"><b>All</b></a></li>
+                <li><a class="dropdown-item" href="#" onclick="petFilter_Clicked('Kevin')">Kevin Costner In Waterworld</a></li>
+                <li><a class="dropdown-item" href="#" onclick="petFilter_Clicked('Randy')">Randy</a></li>
+                <li><a class="dropdown-item" href="#" onclick="petFilter_Clicked('Timmy')">Timmy Cream Corn</a></li>
               </ul>
             </div>
           </div>
@@ -439,6 +455,7 @@
         <div class="row justify-content-center" style="width: 95%; margin-left: auto; margin-right: auto;" id="petGalleryRow">
 
         </div>
+
       </section>
       <button type="button" id="btnPetReopen" onclick="btnPetPageReopen_Clicked()"><img id="petReopenCatIcon" src="Images/Icons/cat.png"></button>
     </div>
