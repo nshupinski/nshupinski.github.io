@@ -49,6 +49,13 @@
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 3em;
+  background-color: rgb(229, 229, 226);
+  padding: 0.5em;
+  border-radius: 5px 5px 5px;
+}
+.petPageTitle {
+  margin-left: auto;
+  margin-right: auto;
 }
 .petNav a {
   color: #2e394d !important;
@@ -64,6 +71,7 @@
   max-height: 15em;
   transition: opacity 1000ms linear;
   opacity: 0;
+  border-radius: 5px 5px 5px;
 }
 
 /* For Mobile */
