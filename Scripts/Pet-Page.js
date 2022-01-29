@@ -28,7 +28,7 @@ var initialArrayLength = petImageArray.length;
 for (var i=0; i<initialArrayLength; i++) {
   
     var newCol = document.createElement("div");   // Create a new column
-    newCol.className = "col-6 col-sm-2";
+    newCol.className = "col-6 col-sm-2 d-flex align-items-center";
     newCol.style.marginBottom = "1em";
   
     var newImg = document.createElement("img");   // And a new image element

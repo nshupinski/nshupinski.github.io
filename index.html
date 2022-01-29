@@ -378,13 +378,16 @@
       <button type="button" id="btnPetClose" onclick="btnPetPageClose_Clicked()">X</button>
       <section id="petList">
 
-        <div class="row petNav justify-content-center">
-          <div class="col-6 justify-content-center" style="text-align: center;">
-            <button type="button" class="btn btn-light" onclick="petFilter_Clicked('')">View All</button>
-          </div>
+        <div class="row petPageTitle">
+          <h1>Pets</h1>
         </div>
 
         <div class="row petNav justify-content-center">
+          <div class="col-6 col-sm-2">
+            <div class="dropdown">
+              <button type="button" class="btn" style="background-color:rgb(54, 194, 147);" onclick="petFilter_Clicked('')">View All</button>
+            </div>
+          </div>
           <div class="col-6 col-sm-2">
             <div class="dropdown">
               <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
