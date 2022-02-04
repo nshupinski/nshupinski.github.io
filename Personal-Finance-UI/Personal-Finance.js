@@ -1,3 +1,6 @@
+
 window.onload = function () {
-    alert("did it");
-}
+
+    // SpreadsheetApp.getActiveSpreadsheet().getRange("I4").getValues(values);
+
+};

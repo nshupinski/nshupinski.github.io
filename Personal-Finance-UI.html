@@ -1,5 +1,7 @@
 <html>
-  <head></head>
+  <head>
+    <script src="Personal-Finance-UI/Personal-Finance.js"></script>
+  </head>
   <body>
     <!--
     BEFORE RUNNING:
@@ -37,6 +39,7 @@
           function (response) {
             // TODO: Change code below to process the `response` object:
             console.log(response.result);
+            document.getElementById("result").innerHTML = response.result;
           },
           function (reason) {
             console.error("error: " + reason.result.error.message);
@@ -102,6 +105,6 @@
     <button id="signin-button" onclick="handleSignInClick()">Sign in</button>
     <button id="signout-button" onclick="handleSignOutClick()">Sign out</button>
 
-    <h5></h5>
+    <h5 id="result"></h5>
   </body>
 </html>
