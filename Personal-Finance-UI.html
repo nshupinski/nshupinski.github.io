@@ -27,18 +27,20 @@
       function makeApiCall() {
         getCurrentMonth();
         var params = {
-          spreadsheetId: "1pBKRb0FbUj2Tf4y99OqF6tRvrUDVVrbKltkUekNoQnY", // TODO: Update placeholder value.
-          range: getCurrentMonth() + "!I4:I", // TODO: Update placeholder value.
-          valueRenderOption: "FORMATTED_VALUE", // TODO: Update placeholder value.
-          dateTimeRenderOption: "SERIAL_NUMBER", // TODO: Update placeholder value.
+          spreadsheetId: "1pBKRb0FbUj2Tf4y99OqF6tRvrUDVVrbKltkUekNoQnY",
+          range: getCurrentMonth() + "!I4:I",
+          valueRenderOption: "FORMATTED_VALUE",
+          dateTimeRenderOption: "SERIAL_NUMBER",
         };
 
         var request = gapi.client.sheets.spreadsheets.values.get(params);
         request.then(
           function (response) {
-            alert(response.result.values.length);
             for (var i = 0; i < response.result.values.length; i++) {
-              alert(response.result.values[i]);
+              if (response.result.values[i] == "") {
+                writeToSpreadsheet(getCurrentMonth() + "!I" + i, "Testing");
+                break;
+              }
             }
           },
           function (reason) {
@@ -46,6 +48,26 @@
           }
         );
       }
+
+      function writeToSpreadsheet(rangeValue, inputValue) {
+        var params = {
+          spreadsheetId: "1pBKRb0FbUj2Tf4y99OqF6tRvrUDVVrbKltkUekNoQnY",
+          range: rangeValue,
+          valueInputOption: inputValue,
+          resource: body,
+        };
+
+        var request = gapi.client.sheets.spreadsheets.values.update(params);
+        request.then(
+          function (response) {
+            alert("done!");
+          },
+          function (reason) {
+            console.error("error: " + reason.result.error.message);
+          }
+        );
+      }
+
       // function makeApiCall() {
       //   getCurrentMonth();
       //   var params = {
