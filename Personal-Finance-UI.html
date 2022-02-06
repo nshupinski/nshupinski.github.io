@@ -49,18 +49,17 @@
         );
       }
 
-      function writeToSpreadsheet(rangeValue, inputValue) {
-        var body = {
-          values: inputValue,
-        };
+      function writeToSpreadsheet(rangeValue, updateValue) {
         var params = {
           spreadsheetId: "1pBKRb0FbUj2Tf4y99OqF6tRvrUDVVrbKltkUekNoQnY",
           range: rangeValue,
           valueInputOption: "RAW",
-          resource: body,
         };
 
-        var request = gapi.client.sheets.spreadsheets.values.update(params);
+        var request = gapi.client.sheets.spreadsheets.values.update(
+          params,
+          updateValue
+        );
         request.then(function (response) {
           alert("done!");
         });
