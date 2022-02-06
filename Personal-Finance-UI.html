@@ -50,10 +50,13 @@
       }
 
       function writeToSpreadsheet(rangeValue, inputValue) {
+        var body = {
+          values: inputValue,
+        };
         var params = {
           spreadsheetId: "1pBKRb0FbUj2Tf4y99OqF6tRvrUDVVrbKltkUekNoQnY",
           range: rangeValue,
-          valueInputOption: inputValue,
+          valueInputOption: "RAW",
           resource: body,
         };
 
