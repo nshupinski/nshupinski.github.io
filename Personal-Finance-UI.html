@@ -38,7 +38,11 @@
           function (response) {
             for (var i = 0; i < response.result.values.length; i++) {
               if (response.result.values[i] == "") {
-                writeToSpreadsheet(getCurrentMonth() + "!I" + i, "Testing");
+                var values = ["Testing", 0, "Test"];
+                writeToSpreadsheet(
+                  getCurrentMonth() + "!I" + i + ":K" + i,
+                  values
+                );
                 break;
               }
             }
@@ -49,7 +53,7 @@
         );
       }
 
-      function writeToSpreadsheet(rangeValue, updateValue) {
+      function writeToSpreadsheet(rangeValue, updateValues) {
         var params = {
           spreadsheetId: "1pBKRb0FbUj2Tf4y99OqF6tRvrUDVVrbKltkUekNoQnY",
           range: rangeValue,
@@ -58,7 +62,7 @@
 
         var request = gapi.client.sheets.spreadsheets.values.update(
           params,
-          updateValue
+          updateValues
         );
         request.then(
           function (response) {
