@@ -60,9 +60,14 @@
           params,
           updateValue
         );
-        request.then(function (response) {
-          alert("done!");
-        });
+        request.then(
+          function (response) {
+            alert("done!");
+          },
+          function (reason) {
+            console.error("error: " + reason.result.error.message);
+          }
+        );
       }
 
       // function makeApiCall() {
