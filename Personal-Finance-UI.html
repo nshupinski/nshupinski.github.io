@@ -38,7 +38,7 @@
           function (response) {
             for (var i = 0; i < response.result.values.length; i++) {
               if (response.result.values[i] == "") {
-                var values = ["Testing", 0, "Test"];
+                var values = ["Testing", "0", "Test"];
                 writeToSpreadsheet(
                   getCurrentMonth() + "!I" + i + ":K" + i,
                   values
