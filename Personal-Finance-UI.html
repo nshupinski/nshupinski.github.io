@@ -58,12 +58,10 @@
           spreadsheetId: "1pBKRb0FbUj2Tf4y99OqF6tRvrUDVVrbKltkUekNoQnY",
           range: rangeValue,
           valueInputOption: "RAW",
+          resources: { values: updateValues },
         };
 
-        var request = gapi.client.sheets.spreadsheets.values.update(
-          params,
-          updateValues
-        );
+        var request = gapi.client.sheets.spreadsheets.values.update(params);
         request.then(
           function (response) {
             alert("done!");
