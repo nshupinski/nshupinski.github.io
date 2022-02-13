@@ -7,25 +7,75 @@
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="Personal-Finance-UI/Personal-Finance.css" />
 
     <script src="Personal-Finance-UI/Personal-Finance.js"></script>
   </head>
 
   <body>
-    <!--
-    BEFORE RUNNING:
-    ---------------
-    1. If not already done, enable the Google Sheets API
-       and check the quota for your project at
-       https://console.developers.google.com/apis/api/sheets
-    2. Get access keys for your application. See
-       https://developers.google.com/api-client-library/javascript/start/start-js#get-access-keys-for-your-application
-    3. For additional information on authentication, see
-       https://developers.google.com/sheets/api/quickstart/js#step_2_set_up_the_sample
-    -->
     <script>
+      function GET(range) {
+        var params = {
+          spreadsheetId: "1pBKRb0FbUj2Tf4y99OqF6tRvrUDVVrbKltkUekNoQnY",
+          range: getCurrentMonth() + range,
+          valueRenderOption: "FORMATTED_VALUE",
+          dateTimeRenderOption: "SERIAL_NUMBER",
+        };
+
+        var request = gapi.client.sheets.spreadsheets.values.get(params);
+        request.then(function (response) {
+          return response;
+        });
+      }
+
+      function getAllCategories() {
+        var catNum = countCategories();
+        var categories = GET("!N23:N" + (23 + catNum));
+      }
+
+      function countCategories() {
+        var response = GET("!N23:N");
+        for (var i = 0; i < response.result.values.length; i++) {
+          if (response.result.values[i] == "") {
+            return i;
+          }
+        }
+      }
+
+      function loadInCategories() {
+        var response = getAllCategories();
+        for (var i = 0; i < response.result.values.length; i++) {
+          document.getElementById("transactionCategories").innerHTML +=
+            "<a class='dropdown-item' href='#'>" +
+            response.result.value[i].text +
+            "</a>";
+        }
+      }
+
+      function getFirstEmptyCell(response) {
+        for (var i = 0; i < response.result.values.length; i++) {
+          if (response.result.values[i] == "") {
+            return i;
+          }
+        }
+      }
+
+      function submitExtraSpending() {
+        // Get First Empty Cell
+        var extraSpendingValues = GET("!I4:I");
+        var emptyCell = getFirstEmptyCell(extraSpendingValues);
+
+        // Get Input Values
+      }
+
+      function getUserInput() {
+        var title = document.getElementById("transactionTitle").value;
+        var amount = document.getElementById("transactionAmount").value;
+        // var category = document.getElementById("transactionCategories").value;
+        var category = $("transactionCategories option:selected").text();
+      }
+
       function makeApiCall() {
-        getCurrentMonth();
         var params = {
           spreadsheetId: "1pBKRb0FbUj2Tf4y99OqF6tRvrUDVVrbKltkUekNoQnY",
           range: getCurrentMonth() + "!I4:I",
@@ -142,7 +192,7 @@
 
       function updateSignInStatus(isSignedIn) {
         if (isSignedIn) {
-          makeApiCall();
+          loadInCategories();
         }
       }
 
@@ -185,9 +235,54 @@
       onreadystatechange="if (this.readyState === 'complete') this.onload()"
     ></script>
 
-    <button id="signin-button" onclick="handleSignInClick()">Sign in</button>
-    <button id="signout-button" onclick="handleSignOutClick()">Sign out</button>
+    <!-- Transaction Title -->
+    <div class="row justify-content-center">
+      <input
+        type="text"
+        id="transactionTitle"
+        placeholder="Transaction Title"
+      />
+      <!-- Transaction Amount -->
+      <input
+        type="number"
+        id="transactionAmount"
+        min="0.00"
+        step="0.01"
+        max="100000"
+        placeholder="$"
+      />
+      <!-- Transaction Categories -->
+      <div class="dropdown" id="transactionCategories">
+        <button
+          class="btn btn-secondary dropdown-toggle"
+          type="button"
+          id="dropdownMenuButton"
+          data-toggle="dropdown"
+          aria-haspopup="true"
+          aria-expanded="false"
+        >
+          Dropdown button
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </div>
+    </div>
 
-    <h5 id="result"></h5>
+    <button id="btnSubmit" onclick="submitExtraSpending()">Submit</button>
+
+    <!-- Sign In & Out Buttons -->
+    <div class="row justify-content-center" id="signInButtons">
+      <div class="col justify-content-center">
+        <button id="signin-button" onclick="handleSignInClick()">
+          Sign in
+        </button>
+        <button id="signout-button" onclick="handleSignOutClick()">
+          Sign out
+        </button>
+      </div>
+    </div>
   </body>
 </html>

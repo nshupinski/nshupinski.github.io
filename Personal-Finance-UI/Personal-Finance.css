@@ -1,0 +1,16 @@
+#signInButtons {
+  bottom: 0;
+}
+
+#transactionTitle {
+  width: 20%;
+  margin-top: 5em;
+}
+#transactionAmount {
+  margin-top: 5em;
+  width: 12%;
+}
+#transactionCategories {
+  margin-top: 5em;
+  width: 25%;
+}
