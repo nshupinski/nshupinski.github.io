@@ -55,20 +55,20 @@
         }
       }
 
+      function submitExtraSpending() {
+        // Get First Empty Cell
+        var extraSpendingValues = GET("!I4:I").response;
+        var emptyCell = getFirstEmptyCell(extraSpendingValues);
+
+        // Get Input Values
+      }
+
       function getFirstEmptyCell(response) {
-        for (var i = 0; i < response.result.values.length; i++) {
+        for (var i = 0; i < response.result.values.length; i++) { 
           if (response.result.values[i] == "") {
             return i;
           }
         }
-      }
-
-      function submitExtraSpending() {
-        // Get First Empty Cell
-        var extraSpendingValues = GET("!I4:I");
-        var emptyCell = getFirstEmptyCell(extraSpendingValues);
-
-        // Get Input Values
       }
 
       function getUserInput() {
