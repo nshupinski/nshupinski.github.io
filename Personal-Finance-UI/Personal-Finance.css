@@ -2,6 +2,10 @@
   bottom: 0;
 }
 
+#btnSubmit {
+  width: 4em;
+}
+
 #transactionTitle {
   width: 20%;
   margin-top: 5em;
