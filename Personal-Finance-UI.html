@@ -31,20 +31,6 @@
         });
       }
 
-      function getAllCategories() {
-        var catNum = countCategories();
-        var categories = GET("!N23:N" + (23 + catNum));
-      }
-
-      function countCategories() {
-        var response = GET("!N23:N");
-        for (var i = 0; i < response.result.values.length; i++) {
-          if (response.result.values[i] == "") {
-            return i;
-          }
-        }
-      }
-
       function loadInCategories() {
         var response = getAllCategories();
         for (var i = 0; i < response.result.values.length; i++) {
@@ -54,10 +40,23 @@
             "</a>";
         }
       }
+      function getAllCategories() {
+        var catNum = countCategories();
+        var categories = GET("!N23:N" + (23 + catNum));
+      }
+      function countCategories() {
+        var response = GET("!N23:N");
+        for (var i = 0; i < response.result.values.length; i++) {
+          if (response.result.values[i] == "") {
+            return i;
+          }
+        }
+      }
 
       function submitExtraSpending() {
         // Get First Empty Cell
         var extraSpendingValues = GET("!I4:I").response;
+        console.log(extraSpendingValues);
         var emptyCell = getFirstEmptyCell(extraSpendingValues);
 
         // Get Input Values
@@ -260,9 +259,7 @@
         Dropdown button
       </button>
       <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-        <li><a class="dropdown-item" href="#">Action</a></li>
-        <li><a class="dropdown-item" href="#">Another action</a></li>
-        <li><a class="dropdown-item" href="#">Something else here</a></li>
+        <li><a class="dropdown-item" href="#">Example</a></li>
       </ul>
     </div>
 
