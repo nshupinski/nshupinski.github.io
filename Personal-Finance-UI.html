@@ -17,49 +17,64 @@
 
   <body>
     <script>
-      function GET(range) {
+
+      var categories = [];
+
+      // Categories
+      function loadInCategories() {
+        var categories = GET_Categories();
+        for (var i = 0; i < categories.length; i++) {
+          document.getElementById("transactionCategories").innerHTML +=
+            "<a class='dropdown-item' href='#'>" +
+            categories.value[i] +
+            "</a>";
+        }
+      }
+
+      function GET_Categories() {
         var params = {
           spreadsheetId: "1pBKRb0FbUj2Tf4y99OqF6tRvrUDVVrbKltkUekNoQnY",
-          range: getCurrentMonth() + range,
+          range: getCurrentMonth() + "!N23:N",
           valueRenderOption: "FORMATTED_VALUE",
           dateTimeRenderOption: "SERIAL_NUMBER",
         };
 
         var request = gapi.client.sheets.spreadsheets.values.get(params);
         request.then(function (response) {
-          return response;
+          for (var i = 0; i < response.result.values.length; i++) {
+            if (response.result.values[i] != "") {
+              categories.push(response.result.values[i]);   // If not empty, add to categories array
+            }
+            else {
+              break;
+            }
+          }
+          return categories;
         });
       }
+// ---------------------------------------------------------------------------------------
 
-      function loadInCategories() {
-        var response = getAllCategories();
-        for (var i = 0; i < response.result.values.length; i++) {
-          document.getElementById("transactionCategories").innerHTML +=
-            "<a class='dropdown-item' href='#'>" +
-            response.result.value[i].text +
-            "</a>";
-        }
-      }
-      function getAllCategories() {
-        var catNum = countCategories();
-        var categories = GET("!N23:N" + (23 + catNum));
-      }
-      function countCategories() {
-        var response = GET("!N23:N");
-        for (var i = 0; i < response.result.values.length; i++) {
-          if (response.result.values[i] == "") {
-            return i;
-          }
-        }
-      }
+      function GET_ExtraSpendingValues() {
+        var params = {
+          spreadsheetId: "1pBKRb0FbUj2Tf4y99OqF6tRvrUDVVrbKltkUekNoQnY",
+          range: getCurrentMonth() + "!I4:I",
+          valueRenderOption: "FORMATTED_VALUE",
+          dateTimeRenderOption: "SERIAL_NUMBER",
+        };
 
-      function submitExtraSpending() {
-        // Get First Empty Cell
-        var extraSpendingValues = GET("!I4:I");
-        alert(extraSpendingValues);
-        var emptyCell = getFirstEmptyCell(extraSpendingValues);
+        var request = gapi.client.sheets.spreadsheets.values.get(params);
+        request.then(function (response) {
+          // Get User Input
+          var title = document.getElementById("transactionTitle").value;
+          var amount = document.getElementById("transactionAmount").value;
+          var category = $("transactionCategories option:selected").text();
 
-        // Get Input Values
+          var values = [[title, amount, category]];
+          var body = { values: values };
+
+          var emptyCell = getFirstEmptyCell(response);
+          writeToSpreadsheet(getCurrentMonth() + "!I" + (emptyCell + 4) + ":K" + (emptyCell + 4), body);
+        });
       }
 
       function getFirstEmptyCell(response) {
@@ -70,41 +85,41 @@
         }
       }
 
-      function getUserInput() {
-        var title = document.getElementById("transactionTitle").value;
-        var amount = document.getElementById("transactionAmount").value;
-        // var category = document.getElementById("transactionCategories").value;
-        var category = $("transactionCategories option:selected").text();
-      }
+      // function getUserInput() {
+      //   var title = document.getElementById("transactionTitle").value;
+      //   var amount = document.getElementById("transactionAmount").value;
+      //   // var category = document.getElementById("transactionCategories").value;
+      //   var category = $("transactionCategories option:selected").text();
+      // }
 
-      function makeApiCall() {
-        var params = {
-          spreadsheetId: "1pBKRb0FbUj2Tf4y99OqF6tRvrUDVVrbKltkUekNoQnY",
-          range: getCurrentMonth() + "!I4:I",
-          valueRenderOption: "FORMATTED_VALUE",
-          dateTimeRenderOption: "SERIAL_NUMBER",
-        };
+      // function makeApiCall() {
+      //   var params = {
+      //     spreadsheetId: "1pBKRb0FbUj2Tf4y99OqF6tRvrUDVVrbKltkUekNoQnY",
+      //     range: getCurrentMonth() + "!I4:I",
+      //     valueRenderOption: "FORMATTED_VALUE",
+      //     dateTimeRenderOption: "SERIAL_NUMBER",
+      //   };
 
-        var request = gapi.client.sheets.spreadsheets.values.get(params);
-        request.then(
-          function (response) {
-            for (var i = 0; i < response.result.values.length; i++) {
-              if (response.result.values[i] == "") {
-                var values = [["Testing", "0", "Test"]];
-                var body = { values: values };
-                writeToSpreadsheet(
-                  getCurrentMonth() + "!I" + (i + 4) + ":K" + (i + 4),
-                  body
-                );
-                break;
-              }
-            }
-          },
-          function (reason) {
-            console.error("error: " + reason.result.error.message);
-          }
-        );
-      }
+      //   var request = gapi.client.sheets.spreadsheets.values.get(params);
+      //   request.then(
+      //     function (response) {
+      //       for (var i = 0; i < response.result.values.length; i++) {
+      //         if (response.result.values[i] == "") {
+      //           var values = [["Testing", "0", "Test"]];
+      //           var body = { values: values };
+      //           writeToSpreadsheet(
+      //             getCurrentMonth() + "!I" + (i + 4) + ":K" + (i + 4),
+      //             body
+      //           );
+      //           break;
+      //         }
+      //       }
+      //     },
+      //     function (reason) {
+      //       console.error("error: " + reason.result.error.message);
+      //     }
+      //   );
+      // }
 
       function writeToSpreadsheet(rangeValue, updateValues) {
         var params = {
