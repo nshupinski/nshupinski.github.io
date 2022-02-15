@@ -55,7 +55,7 @@
 
       function submitExtraSpending() {
         // Get First Empty Cell
-        var extraSpendingValues = GET("!I4:I").response;
+        var extraSpendingValues = GET("!I4:I");
         console.log(extraSpendingValues);
         var emptyCell = getFirstEmptyCell(extraSpendingValues);
 
