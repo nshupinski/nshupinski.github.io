@@ -53,10 +53,10 @@
           }
           alert(categories);
           for (var i = 0; i < categories.length; i++) {
-          document.getElementById("transactionCategories").innerHTML +=
-            "<a class='dropdown-item' href='#'>" +
+          document.getElementById("categoriesList").innerHTML +=
+            "<li><a class='dropdown-item' href='#'>" +
             categories[i] +
-            "</a>";
+            "</a></li>";
           }
         });
       }
@@ -281,8 +281,8 @@
       <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
         Dropdown button
       </button>
-      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-        <li><a class="dropdown-item" href="#">Example</a></li>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1" id="categoriesList">
+
       </ul>
     </div>
 
