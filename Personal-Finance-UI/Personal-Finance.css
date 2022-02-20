@@ -7,26 +7,23 @@
 }
 
 #transactionTitle {
-  width: 20%;
   margin-top: 5em;
 }
 #transactionAmount {
   margin-top: 5em;
-  width: 12%;
 }
 #transactionCategories {
   margin-top: 5em;
-  width: 25%;
 }
 
-/* For Mobile */
+/* For Mobile
 @media screen and (max-width: 688px) {
   #btnSubmit {
-    width: 4em;
+    width: 80%;
   }
 
   #transactionTitle {
-    width: 20%;
+    width: 80%;
     margin-top: 5em;
   }
   #transactionAmount {
@@ -37,4 +34,4 @@
     margin-top: 5em;
     width: 25%;
   }
-}
+} */
