@@ -21,16 +21,16 @@
       var categories = [];
 
       // Categories
-      function loadInCategories() {
-        var categories = GET_Categories();
-        alert(categories);
-        for (var i = 0; i < categories.length; i++) {
-          document.getElementById("transactionCategories").innerHTML +=
-            "<a class='dropdown-item' href='#'>" +
-            categories.value[i] +
-            "</a>";
-        }
-      }
+      // function loadInCategories() {
+      //   var categories = GET_Categories();
+      //   alert(categories);
+      //   for (var i = 0; i < categories.length; i++) {
+      //     document.getElementById("transactionCategories").innerHTML +=
+      //       "<a class='dropdown-item' href='#'>" +
+      //       categories.value[i] +
+      //       "</a>";
+      //   }
+      // }
 
       function GET_Categories() {
         var categories = [];
@@ -51,7 +51,12 @@
               break;
             }
           }
-          return categories;
+          for (var i = 0; i < categories.length; i++) {
+          document.getElementById("transactionCategories").innerHTML +=
+            "<a class='dropdown-item' href='#'>" +
+            categories.value[i] +
+            "</a>";
+        }
         });
       }
 // ---------------------------------------------------------------------------------------
@@ -211,7 +216,7 @@
 
       function updateSignInStatus(isSignedIn) {
         if (isSignedIn) {
-          loadInCategories();
+          GET_Categories();
         }
       }
 
