@@ -23,6 +23,7 @@
       // Categories
       function loadInCategories() {
         var categories = GET_Categories();
+        alert(categories);
         for (var i = 0; i < categories.length; i++) {
           document.getElementById("transactionCategories").innerHTML +=
             "<a class='dropdown-item' href='#'>" +
@@ -49,7 +50,6 @@
               break;
             }
           }
-          alert(categories);
           return categories;
         });
       }
@@ -279,7 +279,7 @@
       </ul>
     </div>
 
-    <button id="btnSubmit" onclick="submitExtraSpending()">Submit</button>
+    <button id="btnSubmit" onclick="GET_ExtraSpendingValues()">Submit</button>
 
     <!-- Sign In & Out Buttons -->
     <div class="row justify-content-center" id="signInButtons">
