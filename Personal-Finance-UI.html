@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="Personal-Finance-UI/Personal-Finance.css" />
 
     <!-- My Scripts -->
-    <script src="Personal-Finance-UI/Personal-Finance.js"></script>
+    <!-- <script src="Personal-Finance-UI/Personal-Finance.js"></script> -->
   </head>
 
   <body>
@@ -78,7 +78,10 @@
           // Get User Input
           var title = document.getElementById("transactionTitle").value;
           var amount = document.getElementById("transactionAmount").value;
-          var category = $("transactionCategories option:selected").text();
+          var category = "-";
+          if (document.getElementById("dropdownMenuButton1").innerHTML != "None") {
+            category = document.getElementById("dropdownMenuButton1").innerHTML;
+          }
 
           var values = [[title, amount, category]];
           var body = { values: values };
@@ -282,7 +285,7 @@
       <!-- Transaction Categories -->
     <div class="dropdown" id="transactionCategories">
       <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-        Categories
+        None
       </button>
       <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1" id="categoriesList">
 
