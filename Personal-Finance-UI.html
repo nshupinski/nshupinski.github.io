@@ -51,12 +51,13 @@
               break;
             }
           }
+          alert(categories);
           for (var i = 0; i < categories.length; i++) {
           document.getElementById("transactionCategories").innerHTML +=
             "<a class='dropdown-item' href='#'>" +
             categories.value[i] +
             "</a>";
-        }
+          }
         });
       }
 // ---------------------------------------------------------------------------------------
