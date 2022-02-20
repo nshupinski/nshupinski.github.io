@@ -79,7 +79,7 @@
           var title = document.getElementById("transactionTitle").value;
           var amount = document.getElementById("transactionAmount").value;
           var category = "-";
-          if (document.getElementById("dropdownMenuButton1").innerHTML != "None") {
+          if (!(document.getElementById("dropdownMenuButton1").innerHTML == "None")) {
             category = document.getElementById("dropdownMenuButton1").innerHTML;
           }
 
@@ -274,6 +274,7 @@
         placeholder="Transaction Title"
       />
       <!-- Transaction Amount -->
+    <div class="row justify-content-center">
       <input
         type="number"
         id="transactionAmount"
@@ -282,17 +283,21 @@
         max="100000"
         placeholder="$"
       />
-      <!-- Transaction Categories -->
-    <div class="dropdown" id="transactionCategories">
-      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-        None
-      </button>
-      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1" id="categoriesList">
-
-      </ul>
     </div>
+      <!-- Transaction Categories -->
+    <div class="row justify-content-center">
+      <div class="dropdown" id="transactionCategories">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+          None
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1" id="categoriesList">
 
-    <button id="btnSubmit" onclick="GET_ExtraSpendingValues()">Submit</button>
+        </ul>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <button id="btnSubmit" onclick="GET_ExtraSpendingValues()">Submit</button>
+    </div>
 
     <!-- Sign In & Out Buttons -->
     <div class="row justify-content-center" id="signInButtons">
