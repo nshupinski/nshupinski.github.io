@@ -51,14 +51,17 @@
               break;
             }
           }
-          alert(categories);
           for (var i = 0; i < categories.length; i++) {
           document.getElementById("categoriesList").innerHTML +=
-            "<li><a class='dropdown-item' href='#'>" +
+            "<li><a class='dropdown-item' href='#' onclick='ddlCategories_Clicked(" + categories[i] + ")'>" +
             categories[i] +
             "</a></li>";
           }
         });
+      }
+
+      function ddlCategories_Clicked(selectedCategory) {
+        document.getElementById("dropdownMenuButton1").innerHTML = selectedCategory;
       }
 // ---------------------------------------------------------------------------------------
 
@@ -279,7 +282,7 @@
       <!-- Transaction Categories -->
     <div class="dropdown" id="transactionCategories">
       <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-        Dropdown button
+        Categories
       </button>
       <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1" id="categoriesList">
 
