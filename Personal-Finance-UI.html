@@ -44,7 +44,7 @@
 
         var request = gapi.client.sheets.spreadsheets.values.get(params);
         request.then(function (response) {
-          alert(response);
+          alert(response.result.value);
           for (var i = 0; i < response.result.values.length; i++) {
             if (response.result.values[i] != "") {
               categories.push(response.result.values[i]);   // If not empty, add to categories array
