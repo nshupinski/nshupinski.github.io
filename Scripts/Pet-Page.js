@@ -30,12 +30,12 @@ for (var i=0; i<initialArrayLength; i++) {
     var newCol = document.createElement("div");   // Create a new column
     newCol.className = "col-6 col-sm-2 d-flex align-items-center";
     newCol.style.marginBottom = "1em";
+    newCol.addEventListener('click', Img_Clicked, false);
   
     var newImg = document.createElement("img");   // And a new image element
     newImg.className = "carousel-image petImg";
     newImg.src = petImageArray[petImageArray.length - 1];
     newImg.id = "Img" + i;
-    // newImg.style.opacity = "0";
   
     newCol.appendChild(newImg);
     document.getElementById("petGalleryRow").appendChild(newCol);    // Append them
@@ -52,6 +52,14 @@ function petFilter_Clicked(keyword) {
   fadeOutPics();
   // Repopulate
   setTimeout(repopulate, 1500, keyword);
+}
+
+function Img_Clicked(e) {
+  // var clickedImg = e.target.id;
+  document.getElementById("petPopUp").src = e.target.src;
+  document.getElementById("petPopUp").style.display = "block";
+  document.getElementById("page-mask").style.zIndex = 9999;
+  document.getElementById("petPageBackground").classList.add("is-blurred");
 }
   
 function fadeInPics(initialArrayLength) {

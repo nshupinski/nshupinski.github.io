@@ -16,11 +16,12 @@
 
 #petsHeader {
   text-align: center;
-  margin-top: -1.5em;
-  font-size: xx-large;
+  margin-top: -1em;
+  font-size: 4em;
   width: auto;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 0.5em;
 }
 
 #btnPetClose {
@@ -56,7 +57,7 @@
 #petsAccord {
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 1em;
+  margin-bottom: 1.5em;
 }
 #petAccordHeader {
   width: 7em;
@@ -97,6 +98,17 @@
   border-radius: 5px 5px 5px;
 }
 
+#petPopUp {
+  position: fixed;
+  max-width: 65%;
+  max-height: 85%;
+  z-index: 10000;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+
 /* For Mobile */
 @media screen and (max-width: 688px) {
   /* Pet Page */
@@ -115,6 +127,14 @@
   }
 
   #petsAccord {
-    width: 80%;
+    width: 85%;
+  }
+
+  #petAccordBody {
+    width: 100%;
+  }
+
+  #petPopUp {
+    width: 85%;
   }
 }

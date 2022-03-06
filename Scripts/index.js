@@ -145,3 +145,17 @@ function btnFilterDrop_Clicked() {
     }
 }
 
+function pagemask_Clicked() {
+    document.getElementById("page-mask").style.zIndex = -10;
+    for(var i=1; i<5; i++) {
+        document.getElementById("proj" + i + "Modal").style.display = "none";
+    }
+    /* for project modals */
+    document.getElementById('headerBackground').className = "bg-img justify-content-center";
+
+    /* for pet page */
+    document.getElementById("petPopUp").style.display = "none";
+    document.getElementById("petPageBackground").classList.remove("is-blurred");
+
+}
+
