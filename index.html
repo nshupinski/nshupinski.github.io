@@ -381,101 +381,106 @@
       <section id="petList">
 
         <div class="row petPageTitle">
-          <h1 style="text-align: center; margin-top: -1.5em; font-size:xx-large;"><b><i>Pets</i></b></h1>
+          <h1 id="petsHeader"><b><i>Pets</i></b></h1>
         </div>
 
-        <!-- Test -->
+        <!-- Accordion -->
         <div id="petsAccord">
-          <div class="card">
-            <div class="card-header" id="petAccordHeader">
+          <div class="card" style="background-color: rgb(0,0,0,0); border-style: none;">
+            <div class="card-header" style="height: 2.8em;" id="petAccordHeader">
               <h5 class="mb-0">
-                <button class="btn btn-link" data-toggle="collapse" data-target="#petCollapse" aria-expanded="true" aria-controls="petCollapse">
-                  Collapsible Group Item #1
+                <p style="display: inline;">Filter</p>
+                <button class="btn btn-link" id="btnPetFilterDrop" data-toggle="collapse" data-target="#petCollapse" aria-expanded="true" aria-controls="petCollapse" onclick="btnFilterDrop_Clicked()">
+                  +
                 </button>
               </h5>
             </div>
         
             <div id="petCollapse" class="collapse" aria-labelledby="petAccordHeader" data-parent="#petsAccord">
-              <div class="card-body">
-                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+              <div class="card-body" id="petAccordBody">
+                <!-- Accordion Inside -->
+                <div class="row">
+                  <div class="col-6 col-sm-2 petFilter">
+                    <div class="dropdown">
+                      <button type="button" class="btn" style="background-color:rgb(54, 194, 147);" onclick="petFilter_Clicked('')">View All</button>
+                    </div>
+                  </div>
+                  <div class="col-6 col-sm-2 petFilter">
+                    <div class="dropdown">
+                      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                        My Pets
+                      </button>
+                      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <li><a class="dropdown-item" href="#" onclick="petFilter_Clicked('My Pets')"><b>All</b></a></li>
+                        <div class="dropdown-divider"></div>
+                        <li><a class="dropdown-item" href="#" onclick="petFilter_Clicked('Bacon')">Bacon</a></li>
+                        <li><a class="dropdown-item" href="#" onclick="petFilter_Clicked('Kiwi')">Kiwi</a></li>
+                        <li><a class="dropdown-item" href="#" onclick="petFilter_Clicked('Commodore')">Commodore Gills</a></li>
+                        <li><a class="dropdown-item" href="#" onclick="petFilter_Clicked('Mark')">Mark</a></li>
+                        <li><a class="dropdown-item" href="#" onclick="petFilter_Clicked('Pebbles')">Pebbles</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="col-6 col-sm-2 petFilter">
+                    <div class="dropdown">
+                      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                        Parents'
+                      </button>
+                      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <li><a class="dropdown-item" href="#" onclick="petFilter_Clicked('Parents')"><b>All</b></a></li>
+                        <div class="dropdown-divider"></div>
+                        <li><a class="dropdown-item" href="#" onclick="petFilter_Clicked('stink')">Cooper</a></li>
+                        <li><a class="dropdown-item" href="#" onclick="petFilter_Clicked('fergus')">Fergus</a></li>
+                        <li><a class="dropdown-item" href="#" onclick="petFilter_Clicked('sydney')">Sydney</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="col-6 col-sm-2 petFilter">
+                    <div class="dropdown">
+                      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                        Grandparents'
+                      </button>
+                      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <li><a class="dropdown-item" href="#" onclick="petFilter_Clicked('Pete')">Uncle Pete</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="col-6 col-sm-2 petFilter">
+                    <div class="dropdown">
+                      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                        Sister's
+                      </button>
+                      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <li><a class="dropdown-item" href="#" onclick="petFilter_Clicked('Sister')"><b>All</b></a></li>
+                        <div class="dropdown-divider"></div>
+                        <li><a class="dropdown-item" href="#" onclick="petFilter_Clicked('Pea')">Pea</a></li>
+                        <li><a class="dropdown-item" href="#" onclick="petFilter_Clicked('Opie')">Opie</a></li>
+                        <li><a class="dropdown-item" href="#" onclick="petFilter_Clicked('Ivan')">Ivan</a></li>
+                        <li><a class="dropdown-item" href="#" onclick="petFilter_Clicked('Pickles')">Pickles</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="col-6 col-sm-2 petFilter">
+                    <div class="dropdown">
+                      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                        Brother's
+                      </button>
+                      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <li><a class="dropdown-item" href="#" onclick="petFilter_Clicked('Brother')"><b>All</b></a></li>
+                        <div class="dropdown-divider"></div>
+                        <li><a class="dropdown-item" href="#" onclick="petFilter_Clicked('Kevin')">Kevin Costner In Waterworld</a></li>
+                        <li><a class="dropdown-item" href="#" onclick="petFilter_Clicked('Randy')">Randy</a></li>
+                        <li><a class="dropdown-item" href="#" onclick="petFilter_Clicked('Timmy')">Timmy Cream Corn</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <!-- End Accordion Inside-->
               </div>
             </div>
           </div>
         </div>
-<!-- End Test -->
-
-        <div class="row petNav justify-content-center">
-          <div class="col-6 col-sm-2">
-            <div class="dropdown">
-              <button type="button" class="btn" style="background-color:rgb(54, 194, 147);" onclick="petFilter_Clicked('')">View All</button>
-            </div>
-          </div>
-          <div class="col-6 col-sm-2">
-            <div class="dropdown">
-              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                My Pets
-              </button>
-              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                <li><a class="dropdown-item" href="#" onclick="petFilter_Clicked('My Pets')"><b>All</b></a></li>
-                <li><a class="dropdown-item" href="#" onclick="petFilter_Clicked('Bacon')">Bacon</a></li>
-                <li><a class="dropdown-item" href="#" onclick="petFilter_Clicked('Kiwi')">Kiwi</a></li>
-                <li><a class="dropdown-item" href="#" onclick="petFilter_Clicked('Commodore')">Commodore Gills</a></li>
-                <li><a class="dropdown-item" href="#" onclick="petFilter_Clicked('Mark')">Mark</a></li>
-                <li><a class="dropdown-item" href="#" onclick="petFilter_Clicked('Pebbles')">Pebbles</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-6 col-sm-2">
-            <div class="dropdown">
-              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                Parents'
-              </button>
-              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                <li><a class="dropdown-item" href="#" onclick="petFilter_Clicked('Parents')"><b>All</b></a></li>
-                <li><a class="dropdown-item" href="#" onclick="petFilter_Clicked('stink')">Cooper</a></li>
-                <li><a class="dropdown-item" href="#" onclick="petFilter_Clicked('fergus')">Fergus</a></li>
-                <li><a class="dropdown-item" href="#" onclick="petFilter_Clicked('sydney')">Sydney</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-6 col-sm-2">
-            <div class="dropdown">
-              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                Grandparents'
-              </button>
-              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                <li><a class="dropdown-item" href="#" onclick="petFilter_Clicked('Pete')">Uncle Pete</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-6 col-sm-2">
-            <div class="dropdown">
-              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                Sister's
-              </button>
-              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                <li><a class="dropdown-item" href="#" onclick="petFilter_Clicked('Sister')"><b>All</b></a></li>
-                <li><a class="dropdown-item" href="#" onclick="petFilter_Clicked('Pea')">Pea</a></li>
-                <li><a class="dropdown-item" href="#" onclick="petFilter_Clicked('Opie')">Opie</a></li>
-                <li><a class="dropdown-item" href="#" onclick="petFilter_Clicked('Ivan')">Ivan</a></li>
-                <li><a class="dropdown-item" href="#" onclick="petFilter_Clicked('Pickles')">Pickles</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-6 col-sm-2">
-            <div class="dropdown">
-              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                Brother's
-              </button>
-              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                <li><a class="dropdown-item" href="#" onclick="petFilter_Clicked('Brother')"><b>All</b></a></li>
-                <li><a class="dropdown-item" href="#" onclick="petFilter_Clicked('Kevin')">Kevin Costner In Waterworld</a></li>
-                <li><a class="dropdown-item" href="#" onclick="petFilter_Clicked('Randy')">Randy</a></li>
-                <li><a class="dropdown-item" href="#" onclick="petFilter_Clicked('Timmy')">Timmy Cream Corn</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
+<!-- End Accordion -->
 
         <div class="row justify-content-center" style="width: 95%; margin-left: auto; margin-right: auto;" id="petGalleryRow">
 

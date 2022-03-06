@@ -135,3 +135,13 @@ function fadeOutCat() {
     catGif.style.paddingBottom = "2em";
 }
 
+function btnFilterDrop_Clicked() {
+    var symbol = document.getElementById("btnPetFilterDrop").innerHTML;
+    if(symbol.includes("+")) {
+        document.getElementById("btnPetFilterDrop").innerHTML = "-"
+    }
+    else {
+        document.getElementById("btnPetFilterDrop").innerHTML = "+"
+    }
+}
+

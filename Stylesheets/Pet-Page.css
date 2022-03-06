@@ -14,6 +14,15 @@
   margin-top: 5em;
 }
 
+#petsHeader {
+  text-align: center;
+  margin-top: -1.5em;
+  font-size: xx-large;
+  width: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 #btnPetClose {
   float: right;
   color: red;
@@ -44,32 +53,46 @@
   width: 3em;
 }
 
-.petNav {
-  width: 80%;
+#petsAccord {
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 3em;
-  background-color: rgb(229, 229, 226);
-  padding: 0.5em;
+  margin-bottom: 1em;
+}
+#petAccordHeader {
+  width: 7em;
+  background-color: aliceblue;
+  margin-left: auto;
+  margin-right: auto;
+}
+#petAccordBody {
+  background-color: aliceblue;
+  width: 80%;
+  margin-right: auto;
+  margin-left: auto;
   border-radius: 5px 5px 5px;
 }
+.petFilter {
+  text-align: center;
+}
+#btnPetFilterDrop {
+  color: black;
+  text-decoration: none;
+  position: relative;
+  width: 100%;
+  text-align: end;
+  top: -1.8em;
+  font-weight: bold;
+  padding-right: 0;
+}
+
 .petPageTitle {
   margin-left: auto;
   margin-right: auto;
 }
-.petNav a {
-  color: #2e394d !important;
-}
-.petNav .col-3 {
-  text-align: center;
-}
-.petNav .dropdown-item {
-  color: #2e394d;
-}
 
 .petImg {
   max-height: 15em;
-  transition: opacity 1000ms linear;
+  transition: opacity 500ms linear;
   opacity: 0;
   border-radius: 5px 5px 5px;
 }
@@ -89,5 +112,9 @@
   .dropdown {
     margin-bottom: 1em;
     margin-right: 1em;
+  }
+
+  #petsAccord {
+    width: 80%;
   }
 }
