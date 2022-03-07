@@ -44,8 +44,6 @@
 
         var request = gapi.client.sheets.spreadsheets.values.get(params);
         request.then(function (response) {
-          alert(daysInThisMonth());
-
           for (var i = 0; i < response.result.values.length; i++) {
             if (response.result.values[i] != "") {
               categories.push(response.result.values[i]);   // If not empty, add to categories array
@@ -92,6 +90,20 @@
           var emptyCell = getFirstEmptyCell(response);
           writeToSpreadsheet(getCurrentMonth() + "!I" + (emptyCell + 4) + ":K" + (emptyCell + 4), body);
         });
+      }
+
+      function separateIntoWeeks() {
+        var dayOfMonth = 1;
+        week1 = [];
+        week2 = [];
+        week3 = [];
+
+
+      }
+
+      function getDayOfWeek() {
+        const date = new Date();
+        var dayOfWeek = date.getDay();
       }
 
       function daysInThisMonth() {
