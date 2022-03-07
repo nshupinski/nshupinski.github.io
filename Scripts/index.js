@@ -1,5 +1,5 @@
+
 window.onload = function () {
-    console.log("Jesus fucking christ");
 
     /* Check screen size for if line should come after name in nav */
     if(screen.width < 992) {
@@ -141,3 +141,26 @@ function fadeOutCat() {
     catGif.style.paddingBottom = "2em";
 }
 
+function btnFilterDrop_Clicked() {
+    var symbol = document.getElementById("btnPetFilterDrop").innerHTML;
+    if(symbol.includes("+")) {
+        document.getElementById("btnPetFilterDrop").innerHTML = "-"
+    }
+    else {
+        document.getElementById("btnPetFilterDrop").innerHTML = "+"
+    }
+}
+
+function pagemask_Clicked() {
+    document.getElementById("page-mask").style.zIndex = -10;
+    for(var i=1; i<5; i++) {
+        document.getElementById("proj" + i + "Modal").style.display = "none";
+    }
+    /* for project modals */
+    document.getElementById('headerBackground').className = "bg-img justify-content-center";
+
+    /* for pet page */
+    document.getElementById("petPopUp").style.display = "none";
+    document.getElementById("petPageBackground").classList.remove("is-blurred");
+
+}
