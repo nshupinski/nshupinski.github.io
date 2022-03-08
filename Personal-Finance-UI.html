@@ -94,16 +94,15 @@
 
       function separateIntoWeeks() {
         var dayOfMonth = 1;
+        const date = new Date();
+        var dayOfWeek = date.getDay();
+        alert(dayOfWeek);
+
         week1 = [];
         week2 = [];
         week3 = [];
 
 
-      }
-
-      function getDayOfWeek() {
-        const date = new Date();
-        var dayOfWeek = date.getDay();
       }
 
       function daysInThisMonth() {
