@@ -47,6 +47,7 @@
           for (var i = 0; i < response.result.values.length; i++) {
             if (response.result.values[i] != "") {
               categories.push(response.result.values[i]);   // If not empty, add to categories array
+              document.getElementById("categoriesDropDown").innerHTML = "Categories";
             }
             else {
               break;
@@ -114,7 +115,7 @@
 
         var request = gapi.client.sheets.spreadsheets.values.get(params);
         request.then(function (response) {
-          ALERT(response.result.values);  
+          alert(response.result.values);  
           for (var i = 0; i < response.result.values.length; i++) { 
           if (response.result.values[i] == "") {
             return i;
@@ -390,10 +391,10 @@
     <div class="row justify-content-center">
       <div class="col-9 col-sm-6 justify-content-center" style="text-align: center;">
         <div class="dropdown" id="transactionCategories">
-          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="categoriesDropDown" data-bs-toggle="dropdown" aria-expanded="false">
             None
           </button>
-          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1" id="categoriesList">
+          <ul class="dropdown-menu" aria-labelledby="categoriesDropDown" id="categoriesList">
 
           </ul>
         </div>
