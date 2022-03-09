@@ -80,6 +80,41 @@
           var title = document.getElementById("transactionTitle").value;
           var amount = document.getElementById("transactionAmount").value;
           var category = "-";
+          var date = getDateFormatted();
+          if (!(document.getElementById("dropdownMenuButton1").innerHTML == "None")) {
+            category = document.getElementById("dropdownMenuButton1").innerHTML;
+          }
+
+          var values = [[title, amount, category, date]];
+          var body = { values: values };
+
+          var emptyCell = getFirstEmptyCell(response);
+          writeToSpreadsheet(getCurrentMonth() + "!I" + (emptyCell + 4) + ":L" + (emptyCell + 4), body);
+        });
+      }
+
+       function getDateFormatted() {
+        var  formattedDate;
+
+         var today = new Date();
+         formattedDate = today.toString().substring(0, today.toString().indexOf(' '));
+         formattedDate += ", " + today.getDate();
+         return formattedDate;
+      }
+
+      // ---------------------------------------------------------------------------------------
+
+      function GET_WeekEndings() {
+        var params = {
+          spreadsheetId: "1pBKRb0FbUj2Tf4y99OqF6tRvrUDVVrbKltkUekNoQnY",
+          range: getCurrentMonth() + "!M4:M",
+          valueRenderOption: "FORMATTED_VALUE",
+          dateTimeRenderOption: "SERIAL_NUMBER",
+        };
+
+        var request = gapi.client.sheets.spreadsheets.values.get(params);
+        request.then(function (response) {
+          // Get User Input
           if (!(document.getElementById("dropdownMenuButton1").innerHTML == "None")) {
             category = document.getElementById("dropdownMenuButton1").innerHTML;
           }
@@ -138,11 +173,6 @@
             dayOfMonth++;
           }
         }
-        console.log(week1);
-        console.log(week2);
-        console.log(week3);
-        console.log(week4);
-        console.log(week5);
       }
 
       function daysInThisMonth() {
@@ -151,6 +181,14 @@
       }
 
       function getFirstEmptyCell(response) {
+        for (var i = 0; i < response.result.values.length; i++) { 
+          if (response.result.values[i] == "") {
+            return i;
+          }
+        }
+      }
+
+      function getWeekEndings(response) {
         for (var i = 0; i < response.result.values.length; i++) { 
           if (response.result.values[i] == "") {
             return i;
