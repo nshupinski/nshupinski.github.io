@@ -96,18 +96,53 @@
         var dayOfMonth = 1;
         const date = new Date();
         var dayOfWeek = date.getDay();
-        alert(date);
 
         week1 = [];
         week2 = [];
         week3 = [];
+        week4 = [];
+        week5 = [];
 
         var firstDay = new Date(date.getFullYear(), date.getMonth(), 1);
-        alert(firstDay);
 
-        for (var i=1; i<=daysInThisMonth(); i++) {
-
+        // If it's Sunday
+        if(firstDay.getDay() == 0) {
+          var x = 1;
         }
+        else {
+          var x = 7-(firstDay.getDay()-1)
+        }
+        // Week 1
+        for(var i=dayOfMonth; i<x+1; i++) {
+          week1.push(i);
+          dayOfMonth++;
+        }
+        // Week 2
+        for(var a=0; a<7; a++) {
+          week2.push(dayOfMonth);
+          dayOfMonth++;
+        }
+        // Week 3
+        for(var u=0; u<7; u++) {
+          week3.push(dayOfMonth);
+          dayOfMonth++;
+        }
+        // Week 4
+        for(var v=0; v<7; v++) {
+          week4.push(dayOfMonth);
+          dayOfMonth++;
+        }
+        if(daysInThisMonth()-dayOfMonth > 0) {
+          for(var e=dayOfMonth; e<daysInThisMonth()+1; e++) {
+            week5.push(dayOfMonth);
+            dayOfMonth++;
+          }
+        }
+        console.log(week1);
+        console.log(week2);
+        console.log(week3);
+        console.log(week4);
+        console.log(week5);
       }
 
       function daysInThisMonth() {
