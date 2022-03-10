@@ -115,7 +115,7 @@
 
         var request = gapi.client.sheets.spreadsheets.values.get(params);
         request.then(function (response) {
-          alert(response.result.length());
+          alert(response.result.values.length);
           for (var i = 0; i < response.result.values.length; i++) { 
             
             alert(response.result.values[i]);
