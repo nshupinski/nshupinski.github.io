@@ -115,14 +115,12 @@
 
         var request = gapi.client.sheets.spreadsheets.values.get(params);
         request.then(function (response) {
-          alert(response.result.values.length);
           for (var i = 0; i < response.result.values.length; i++) { 
             
-            alert(response.result.values[i]);
-          // if (response.result.values[i] == "") {
+          if (response.result.values[i].includes("SUM")) {
             
-          //   return i;
-          // }
+            alert(response.result.values[i] + "YAS!!!");
+          }
         }           
 
           var emptyCell = getFirstEmptyCell(response);
