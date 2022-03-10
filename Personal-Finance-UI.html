@@ -82,8 +82,8 @@
           var amount = document.getElementById("transactionAmount").value;
           var category = "-";
           var date = getDateFormatted();
-          if (!(document.getElementById("dropdownMenuButton1").innerHTML == "None")) {
-            category = document.getElementById("dropdownMenuButton1").innerHTML;
+          if (!(document.getElementById("categoriesDropDown").innerHTML == "None")) {
+            category = document.getElementById("categoriesDropDown").innerHTML;
           }
 
           var values = [[title, amount, category, date]];
