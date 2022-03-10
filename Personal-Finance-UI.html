@@ -117,14 +117,14 @@
         request.then(function (response) {
           for (var i = 0; i < response.result.values.length; i++) { 
             
-          if (response.result.values[i].includes("SUM")) {
+          if (response.result.values[i].toString().includes("SUM")) {
             
             alert(response.result.values[i] + "YAS!!!");
           }
         }           
 
-          var emptyCell = getFirstEmptyCell(response);
-          writeToSpreadsheet(getCurrentMonth() + "!I" + (emptyCell + 4) + ":K" + (emptyCell + 4), body);
+          // var emptyCell = getFirstEmptyCell(response);
+          // writeToSpreadsheet(getCurrentMonth() + "!I" + (emptyCell + 4) + ":K" + (emptyCell + 4), body);
         });
       }
 
