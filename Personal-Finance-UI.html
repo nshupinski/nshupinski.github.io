@@ -89,10 +89,17 @@
           var values = [[title, amount, category, date]];
           var body = { values: values };
 
-          var emptyCell = getFirstEmptyCell(response);
+          // if(separateIntoWeeks(date.getDate()) == 1) {
+          //   var emptyCell = getFirstEmptyCell(response);
+          // }
+          // else {
+
+          // }
+          
           writeToSpreadsheet(getCurrentMonth() + "!I" + (emptyCell + 4) + ":L" + (emptyCell + 4), body);
         });
       }
+
 
        function getDateFormatted() {
         var  formattedDate;
@@ -105,7 +112,7 @@
 
       // ---------------------------------------------------------------------------------------
 
-      function GET_WeekEndings() {
+      function GET_WeekEndings(week) {
         var params = {
           spreadsheetId: "1pBKRb0FbUj2Tf4y99OqF6tRvrUDVVrbKltkUekNoQnY",
           range: getCurrentMonth() + "!M4:M",
@@ -113,22 +120,34 @@
           dateTimeRenderOption: "SERIAL_NUMBER",
         };
 
+        alert(new Date());
+
         var request = gapi.client.sheets.spreadsheets.values.get(params);
         request.then(function (response) {
-          for (var i = 0; i < response.result.values.length; i++) { 
-            
-          if (response.result.values[i].toString().includes("SUM")) {
-            
-            alert(response.result.values[i] + "YAS!!!");
+
+          var insertRow;
+          var sumNum = 1;
+
+          if(week == 1) {
+            insertRow = getFirstEmptyCell();
           }
-        }           
+
+          for (var i = 0; i < response.result.values.length; i++) { 
+            if(sumNum < separateIntoWeeks(new Date())) {
+              if(response.result.values[i].toString().includes("SUM")) {
+              sumNum++;
+              }
+            }
+          }           
 
           // var emptyCell = getFirstEmptyCell(response);
           // writeToSpreadsheet(getCurrentMonth() + "!I" + (emptyCell + 4) + ":K" + (emptyCell + 4), body);
         });
       }
 
-      function separateIntoWeeks() {
+      // ---------------------------------------------------------------------------------------
+
+      function separateIntoWeeks(insertDay) {
         var dayOfMonth = 1;
         const date = new Date();
         var dayOfWeek = date.getDay();
@@ -174,6 +193,28 @@
             dayOfMonth++;
           }
         }
+
+        var week;
+        // Check which week current date is in
+        for(var k=0; k<daysInThisMonth()+1; k++) {
+          if(insertDay == week1[k]) {
+            week = 1;
+          }
+          else if(insertDay == week2[k]) {
+            week = 2;
+          }
+          else if(insertDay == week3[k]) {
+            week = 3;
+          }
+          else if(insertDay == week4[k]) {
+            week = 4;
+          }
+          else if(insertDay == week5[k]) {
+            week = 5;
+          }
+        }
+
+        return week;
       }
 
       function daysInThisMonth() {
