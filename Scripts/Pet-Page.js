@@ -19,8 +19,8 @@ function addAllImages() {
   petImageArray.push("Images/Pets/Parents/stink1.png");
   petImageArray.push("Images/Pets/Parents/stink2.png");
   petImageArray.push("Images/Pets/Parents/stink3.jpeg");
-  petImageArray.push("Images/Pets/Parents/sydney1.jpeg");
   petImageArray.push("Images/Pets/Parents/sydney2.jpeg");
+  petImageArray.push("Images/Pets/Parents/sydney3.jpeg");
   petImageArray.push("Images/Pets/Brother/kevin.jpg");
   petImageArray.push("Images/Pets/Brother/randy.jpg");
   petImageArray.push("Images/Pets/Brother/timmy.jpg");
