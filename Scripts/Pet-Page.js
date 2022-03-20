@@ -44,7 +44,12 @@ for (var i=0; i<initialArrayLength; i++) {
     newImg.id = "Img" + i;
   
     newCol.appendChild(newImg);
-    document.getElementById("petGalleryRow").appendChild(newCol);    // Append them
+    if(i<=11) {
+      document.getElementById("petGalleryRow").appendChild(newCol);    // Append them
+    }
+    else if (i<=23) {
+      document.getElementById("petGalleryRow2").appendChild(newCol);    // Append them
+    }
 
     petImageArray.pop(petImageArray[0]);   // And remove element from array
   }

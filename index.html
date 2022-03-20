@@ -482,9 +482,39 @@
         </div>
 <!-- End Accordion -->
 
-        <div class="row justify-content-center overflow-auto" style="width: 95%; margin-left: auto; margin-right: auto;" id="petGalleryRow">
 
-        </div>
+
+<div id="carouselExampleIndicators" style="width: 95%; margin-left: auto; margin-right: auto;" data-bs-interval="false" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+  </div>
+  <div class="carousel-inner" style="border-style: solid; box-shadow: none; padding-top: 5px;">
+    <div class="carousel-item active">
+      <div class="row justify-content-center" style="margin-left: auto; margin-right: auto;" id="petGalleryRow">
+        <!-- Pet Images Insert Here -->
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="row justify-content-center" style="width: 95%; margin-left: auto; margin-right: auto;" id="petGalleryRow2">
+        <!-- Pet Images Insert Here -->
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+
+
+
+        
 
       </section>
       <button type="button" id="btnPetReopen" onclick="btnPetPageReopen_Clicked()"><img id="petReopenCatIcon" src="Images/Icons/cat.png"></button>
