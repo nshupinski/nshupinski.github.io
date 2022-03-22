@@ -89,12 +89,8 @@
           var values = [[title, amount, category, date]];
           var body = { values: values };
 
-          // if(separateIntoWeeks(date.getDate()) == 1) {
-          //   var emptyCell = getFirstEmptyCell(response);
-          // }
-          // else {
-
-          // }
+          var insertWeekStartingCell = GET_WeekEndings(new Date.getDate());
+          var emptyCell = getFirstEmptyCell(response, insertWeekStartingCell);
           
           writeToSpreadsheet(getCurrentMonth() + "!I" + (emptyCell + 4) + ":L" + (emptyCell + 4), body);
         });
@@ -112,7 +108,7 @@
 
       // ---------------------------------------------------------------------------------------
 
-      function GET_WeekEndings(week) {
+      function GET_WeekEndings(insertDay) {
         var params = {
           spreadsheetId: "1pBKRb0FbUj2Tf4y99OqF6tRvrUDVVrbKltkUekNoQnY",
           range: getCurrentMonth() + "!M4:M",
@@ -123,18 +119,25 @@
         var request = gapi.client.sheets.spreadsheets.values.get(params);
         request.then(function (response) {
 
-          var insertRow;
-          var sumNum = 1;
+          var week = separateIntoWeeks(insertDay);
+
+          var insertWeekStartingCell;
+          var sumNum = 0;
 
           if(week == 1) {
-            insertRow = getFirstEmptyCell();
+            insertWeekStartingCell = 4;
+            return insertWeekStartingCell;
           }
 
           for (var i = 0; i < response.result.values.length; i++) { 
-            if(sumNum < separateIntoWeeks(new Date().getDate())) {
+            if(sumNum < week) {
               if(response.result.values[i].toString().includes("SUM")) {
                 sumNum++;
               }
+            }
+            else {
+              insertWeekStartingCell = i+4;
+              return insertWeekStartingCell;
             }
           }           
 
@@ -147,8 +150,8 @@
 
       function separateIntoWeeks(insertDay) {
         var dayOfMonth = 1;
-        const date = new Date();
-        var dayOfWeek = date.getDay();
+        // const date = new Date();
+        // var dayOfWeek = date.getDay();
 
         week1 = [];
         week2 = [];
@@ -220,16 +223,8 @@
         return new Date(now.getFullYear(), now.getMonth()+1, 0).getDate();
       }
 
-      function getFirstEmptyCell(response) {
-        for (var i = 0; i < response.result.values.length; i++) { 
-          if (response.result.values[i] == "") {
-            return i;
-          }
-        }
-      }
-
-      function getWeekEndings(response) {
-        for (var i = 0; i < response.result.values.length; i++) { 
+      function getFirstEmptyCell(response, startingRow) {
+        for (var i = startingCell; i < response.result.values.length; i++) { 
           if (response.result.values[i] == "") {
             return i;
           }
