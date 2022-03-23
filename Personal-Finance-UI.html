@@ -89,7 +89,7 @@
           var values = [[title, amount, category, date]];
           var body = { values: values };
 
-          var insertWeekStartingCell = GET_WeekEndings(new Date.getDate());
+          var insertWeekStartingCell = GET_WeekEndings(new Date().getDate());
           var emptyCell = getFirstEmptyCell(response, insertWeekStartingCell);
           
           writeToSpreadsheet(getCurrentMonth() + "!I" + (emptyCell + 4) + ":L" + (emptyCell + 4), body);
