@@ -67,62 +67,38 @@
       }
 // ---------------------------------------------------------------------------------------
 
-      function GET_ExtraSpendingValues() {
+      function GET_ExtraSpendingValues(insertWeekStartingCell) {
         var params = {
           spreadsheetId: "1pBKRb0FbUj2Tf4y99OqF6tRvrUDVVrbKltkUekNoQnY",
           range: getCurrentMonth() + "!I4:I",
           valueRenderOption: "FORMATTED_VALUE",
           dateTimeRenderOption: "SERIAL_NUMBER",
         };
-
         var request = gapi.client.sheets.spreadsheets.values.get(params);
         request.then(function (response) {
-          // Get User Input
-          var title = document.getElementById("transactionTitle").value;
-          var amount = document.getElementById("transactionAmount").value;
-          var category = "-";
-          var date = getDateFormatted();
-          if (!(document.getElementById("categoriesDropDown").innerHTML == "None")) {
-            category = document.getElementById("categoriesDropDown").innerHTML;
-          }
 
-          var values = [[title, amount, category, date]];
-          var body = { values: values };
-
-          var insertWeekStartingCell = GET_WeekEndings(new Date().getDate());
           var emptyCell = getFirstEmptyCell(response, insertWeekStartingCell);
-          
-          writeToSpreadsheet(getCurrentMonth() + "!I" + (emptyCell + 4) + ":L" + (emptyCell + 4), body);
+          return emptyCell;
         });
-      }
-
-
-       function getDateFormatted() {
-        var  formattedDate;
-
-         var today = new Date();
-         formattedDate = today.toString().substring(0, today.toString().indexOf(' '));
-         formattedDate += ", " + today.getDate();
-         return formattedDate;
       }
 
       // ---------------------------------------------------------------------------------------
 
-      function GET_WeekEndings(insertDay) {
+      function GET_WeekEndings(today) {
         var params = {
           spreadsheetId: "1pBKRb0FbUj2Tf4y99OqF6tRvrUDVVrbKltkUekNoQnY",
           range: getCurrentMonth() + "!M4:M",
           valueRenderOption: "FORMULA",
-          dateTimeRenderOption: "SERIAL_NUMBER",
+          dateTimeRenderOption: "SERIAL_NUMBER"
         };
 
         var request = gapi.client.sheets.spreadsheets.values.get(params);
         request.then(function (response) {
 
-          var week = separateIntoWeeks(insertDay);
+          var week = separateIntoWeeks(today);
 
           var insertWeekStartingCell;
-          var sumNum = 0;
+          var sumNum = 1;
 
           if(week == 1) {
             insertWeekStartingCell = 4;
@@ -140,18 +116,37 @@
               return insertWeekStartingCell;
             }
           }           
-
-          // var emptyCell = getFirstEmptyCell(response);
-          // writeToSpreadsheet(getCurrentMonth() + "!I" + (emptyCell + 4) + ":K" + (emptyCell + 4), body);
+        }, function(reason) {
+          console.error('error: ' + reason.result.error.message);
         });
       }
 
       // ---------------------------------------------------------------------------------------
 
+      function btnSubmit_Clicked() {
+        // Get first cell in correct week
+        var today = new Date().getDate();
+        var insertWeekStartingCell = GET_WeekEndings(today);
+
+        // Get User Input
+        var title = document.getElementById("transactionTitle").value;
+        var amount = document.getElementById("transactionAmount").value;
+        var category = "-";
+        var date = getDateFormatted();
+        if (!(document.getElementById("categoriesDropDown").innerHTML == "None")) {
+          category = document.getElementById("categoriesDropDown").innerHTML;
+        }
+
+        var emptyCell = GET_ExtraSpendingValues(insertWeekStartingCell);
+
+        var values = [[title, amount, category, date]];
+        var body = { values: values };
+        
+        writeToSpreadsheet(getCurrentMonth() + "!I" + (emptyCell) + ":L" + (emptyCell), body);
+      }
+
       function separateIntoWeeks(insertDay) {
         var dayOfMonth = 1;
-        // const date = new Date();
-        // var dayOfWeek = date.getDay();
 
         week1 = [];
         week2 = [];
@@ -219,6 +214,15 @@
         return week;
       }
 
+      function getDateFormatted() {
+        var  formattedDate;
+
+         var today = new Date();
+         formattedDate = today.toString().substring(0, today.toString().indexOf(' '));
+         formattedDate += ", " + today.getDate();
+         return formattedDate;
+      }
+
       function daysInThisMonth() {
         var now = new Date();
         return new Date(now.getFullYear(), now.getMonth()+1, 0).getDate();
@@ -231,42 +235,6 @@
           }
         }
       }
-
-      // function getUserInput() {
-      //   var title = document.getElementById("transactionTitle").value;
-      //   var amount = document.getElementById("transactionAmount").value;
-      //   // var category = document.getElementById("transactionCategories").value;
-      //   var category = $("transactionCategories option:selected").text();
-      // }
-
-      // function makeApiCall() {
-      //   var params = {
-      //     spreadsheetId: "1pBKRb0FbUj2Tf4y99OqF6tRvrUDVVrbKltkUekNoQnY",
-      //     range: getCurrentMonth() + "!I4:I",
-      //     valueRenderOption: "FORMATTED_VALUE",
-      //     dateTimeRenderOption: "SERIAL_NUMBER",
-      //   };
-
-      //   var request = gapi.client.sheets.spreadsheets.values.get(params);
-      //   request.then(
-      //     function (response) {
-      //       for (var i = 0; i < response.result.values.length; i++) {
-      //         if (response.result.values[i] == "") {
-      //           var values = [["Testing", "0", "Test"]];
-      //           var body = { values: values };
-      //           writeToSpreadsheet(
-      //             getCurrentMonth() + "!I" + (i + 4) + ":K" + (i + 4),
-      //             body
-      //           );
-      //           break;
-      //         }
-      //       }
-      //     },
-      //     function (reason) {
-      //       console.error("error: " + reason.result.error.message);
-      //     }
-      //   );
-      // }
 
       function writeToSpreadsheet(rangeValue, updateValues) {
         var params = {
@@ -438,7 +406,7 @@
         </div>
     </div>
     <div class="row justify-content-center">
-      <button id="btnSubmit" onclick="GET_ExtraSpendingValues()">Submit</button>
+      <button id="btnSubmit" onclick="btnSubmit_Clicked()">Submit</button>
     </div>
 
     <!-- Sign In & Out Buttons -->
