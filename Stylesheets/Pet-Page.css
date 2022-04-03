@@ -21,7 +21,7 @@
   width: auto;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 0.5em;
+  margin-bottom: 0.2em;
 }
 
 #btnPetClose {
@@ -89,6 +89,12 @@
 .petPageTitle {
   margin-left: auto;
   margin-right: auto;
+}
+
+.petGalleryRow {
+  margin-left: auto;
+  margin-right: auto;
+  width: 95%;
 }
 
 .petImg {
