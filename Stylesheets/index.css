@@ -139,7 +139,7 @@ code {
   object-fit: contain;
   width: 100%;
   height: inherit;
-  max-height: 13.5em;
+  /* max-height: 13.5em; */
 }
 .carousel-item.active {
   height: inherit;
