@@ -212,6 +212,15 @@ code {
   font-weight: 300;
   font-size: 1.2rem;
 }
+#contact-link {
+  text-align: center;
+  color: black;
+  padding: 2em;
+  background-color: white;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+}
 @media (min-width: 992px) {
   .portfolio-item {
     max-width: none;
