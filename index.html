@@ -362,7 +362,7 @@
         
             <input type="submit" value="Submit" onclick="sendEmail()" class="d-flex">
         </div>
-        <div class="g-recaptcha" data-sitekey="6LeMyNogAAAAANbdBKHkOYR9E_k8gu6fP0F9WBCo"></div>
+        <div class="g-recaptcha" data-sitekey="6LcMotkgAAAAALeFojYHZ9d-6tWOLQw1ExTxVEj1"></div>
         <div class="alert alert-success" id="alert-success" role="alert">
           Message Sent - Thank you!
         </div>
@@ -631,6 +631,7 @@
 <script>
 grecaptcha.enterprise.ready(function() {
     grecaptcha.enterprise.execute('6LcMotkgAAAAAPSMUNwfkqfEj5HoD4iUYWG0_c7g', {action: 'login'}).then(function(token) {
+       document.getElementById("contact-form").style.display = "Block";
     });
 });
 </script>
