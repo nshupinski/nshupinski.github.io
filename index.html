@@ -110,7 +110,7 @@
         <div class="container">
           <div class="row align-items-center justify-content-center">
             <h3 style="text-align: center; margin-bottom: 1.5em; font-family: 'Noto Serif', serif;"><b>~About Me~</b></h3>
-            <img src="Images/About-Me-Pic-Full.JPG" id="about-me-pic" class="col-sm-2 col-5" alt="Nick Shupinski Profile Picture"/>
+            <img src="Images/headshot.jpg" id="about-me-pic" class="col-sm-2 col-5" alt="Nick Shupinski Profile Picture"/>
           </div>
           <div class="row align-items-center">
             <div class="col">
@@ -319,6 +319,28 @@
                     </a>
                 </div>
                 <div class="col-lg-6">
+                  <a class="portfolio-item" href="#!" onclick="showProj3Modal()">
+                      <div class="caption">
+                          <div class="caption-content">
+                              <div class="h3">DTS Flooring Website</div>
+                              <p class="mb-0">Recent custom website developed while at AG Marketing Solutions</p>
+                          </div>
+                      </div>
+                      <img class="img-fluid" src="Images/Projects/dts-flooring_banner.jpg" alt="..." />
+                  </a>
+              </div>
+              <div class="col-lg-6">
+                <a class="portfolio-item" href="#!" onclick="showProj4Modal()">
+                    <div class="caption">
+                        <div class="caption-content">
+                            <div class="h2">La Vela Dining</div>
+                            <p class="mb-0">Recent SquareSpace website developed while at AG Marketing Solutions</p>
+                        </div>
+                    </div>
+                    <img class="img-fluid" src="Images/Projects/laveladining.jpg" alt="..." />
+                </a>
+            </div>
+                <!-- <div class="col-lg-6">
                     <a class="portfolio-item" href="#!" onclick="showProj3Modal()">
                         <div class="caption">
                             <div class="caption-content">
@@ -328,8 +350,8 @@
                         </div>
                         <img class="img-fluid" src="Images/Projects/Eclipse-Icon.png" alt="..." />
                     </a>
-                </div>
-                <div class="col-lg-6">
+                </div> -->
+                <!-- <div class="col-lg-6">
                     <a class="portfolio-item" href="#!" onclick="showProj4Modal()">
                         <div class="caption">
                             <div class="caption-content">
@@ -339,7 +361,7 @@
                         </div>
                         <img class="img-fluid" src="Images/Projects/CIS-3342-Projects.png" alt="..." />
                     </a>
-                </div>
+                </div> -->
             </div>
         </div>
       </section>
@@ -588,8 +610,50 @@
       </div>
     </div>
   </div>
+    <!--DTS Flooring Modal-->
+    <div class="modal" id="proj3Modal" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header" style="background-color: rgb(37, 27, 62);">
+            <h5 class="modal-title" style="margin-right: 1em; color: white;">DTS Flooring</h5>
+            <img src="Images/Projects/Eclipse-logo.png" style="width: 3em;"/>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" style="background-color: white;" onclick="hideProj3Modal()"></button>
+          </div>
+          <div class="modal-body">
+            <p>
+              This website was a great opportunity for me as the exclusive developer on the project while using AG Marketing Solutions' 
+              development template. I got to work closely with designers to develop this website that had existing design files, while 
+              expanding my experience with an existing development framework. I was able to work experience the full scope of the development process
+              while managing my own time and resources.
+            </p>
+          </div>
+          <div class="modal-footer justify-content-center" style="background-color: rgb(37, 27, 62);">
+            <a type="button" class="btn btn-secondary" target="_blank" data-bs-dismiss="modal" href="https://github.com/nshupinski/Java-Task-List">Github</a>
+          </div>
+        </div>
+      </div>
+    </div>
+      <!--La Vela Dining Modal-->
+  <div class="modal" id="proj4Modal" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header" style="background-color: #C8C4BE;">
+          <h5 class="modal-title">La Vela Dining</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" onclick="hideProj4Modal()"></button>
+        </div>
+        <div class="modal-body">
+          <p>La Vela Dining was my first experience developing a SquareSpace website. As the exclusive developer, I was able to experience the start-to-finish process
+            of developing in SquareSpace, as well as the experience of working closely with a client to personally design and develop their website. Since this was a redesign of
+          an existing website, I also learned what goes into redirecting website traffic while maintaining indexed materials.</p>
+        </div>
+        <div class="modal-footer justify-content-center" style="background-color: #C8C4BE;">
+          <a type="button" class="btn btn-secondary" target="_blank" data-bs-dismiss="modal" href="https://github.com/nshupinski/CIS3342_Solution">Github</a>
+        </div>
+      </div>
+    </div>
+  </div>
   <!--Java To-Do Modal-->
-  <div class="modal" id="proj3Modal" tabindex="-1">
+  <!-- <div class="modal" id="proj3Modal" tabindex="-1">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header" style="background-color: rgb(37, 27, 62);">
@@ -610,9 +674,9 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
   <!--Server-Side Modal-->
-  <div class="modal" id="proj4Modal" tabindex="-1">
+  <!-- <div class="modal" id="proj4Modal" tabindex="-1">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header" style="background-color: #C8C4BE;">
@@ -630,7 +694,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
 
   <!-- Hidden Icons -->
   <img style="display: none;" src="Images/Icons/custom-software.png">
